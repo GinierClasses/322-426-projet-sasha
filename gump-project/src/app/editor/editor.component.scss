@@ -1,0 +1,26 @@
+.editor-page-wrapper {
+  display: grid;
+  gap: 1rem;
+  grid-template-areas:
+    "top-bar top-bar top-bar"
+    "toolbar image menu-sidebar";
+  width: 100%;
+  min-height: 100vh;
+}
+
+.top-bar {
+  grid-area: top-bar;
+}
+
+.toolbar {
+  grid-area: toolbar;
+}
+
+.image {
+  grid-area: image;
+}
+
+.menu-sidebar {
+  grid-area: menu-sidebar;
+}
+

@@ -10,12 +10,14 @@ import {MatDialogModule} from "@angular/material/dialog";
 import {MatIconModule} from "@angular/material/icon";
 import {HttpClientModule} from "@angular/common/http";
 import { HomeComponent } from './home/home.component';
+import { EditorComponent } from './editor/editor.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AlertPopupComponent,
     HomeComponent,
+    EditorComponent,
   ],
   imports: [
     BrowserModule,
