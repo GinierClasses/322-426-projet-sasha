@@ -11,6 +11,7 @@ import {MatIconModule} from "@angular/material/icon";
 import {HttpClientModule} from "@angular/common/http";
 import { HomeComponent } from './home/home.component';
 import { EditorComponent } from './editor/editor.component';
+import { RightToolBarComponent } from './editor/right-tool-bar/right-tool-bar.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { EditorComponent } from './editor/editor.component';
     AlertPopupComponent,
     HomeComponent,
     EditorComponent,
+    RightToolBarComponent,
   ],
   imports: [
     BrowserModule,

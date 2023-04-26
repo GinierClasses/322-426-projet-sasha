@@ -22,5 +22,10 @@
 
 .menu-sidebar {
   grid-area: menu-sidebar;
+  display: inline-grid;
+  padding: 10px;
+  background: gray;
+  width: 2.5cm;
+  border-radius: 10px;
 }
 
