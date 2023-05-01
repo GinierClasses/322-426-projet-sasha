@@ -12,6 +12,9 @@ import {HttpClientModule} from "@angular/common/http";
 import { HomeComponent } from './home/home.component';
 import { EditorComponent } from './editor/editor.component';
 import { RightToolBarComponent } from './editor/right-tool-bar/right-tool-bar.component';
+import {MatToolbarModule} from "@angular/material/toolbar";
+import {MatExpansionModule} from "@angular/material/expansion";
+import {MatMenuModule} from "@angular/material/menu";
 
 @NgModule({
   declarations: [
@@ -29,6 +32,9 @@ import { RightToolBarComponent } from './editor/right-tool-bar/right-tool-bar.co
     MatDialogModule,
     MatIconModule,
     HttpClientModule,
+    MatToolbarModule,
+    MatExpansionModule,
+    MatMenuModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

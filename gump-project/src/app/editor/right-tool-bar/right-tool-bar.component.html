@@ -1,6 +1,7 @@
-
-  <a class="rectangle">je suis un rectangle</a>
-  <a class="rectangle">je suis un rectangle2</a>
-  <a class="rectangle">je suis un rectangle3</a>
-  <a class="rectangle">je suis un rectangle4</a>
-  
+<button mat-button [matMenuTriggerFor]="aboveMenu">Above</button>
+<mat-menu #aboveMenu="matMenu" yPosition="above" #appMenu="matMenu">
+  <button mat-menu-item (click)="test()">pinceau</button>
+  <button mat-menu-item>image</button>
+  <button mat-menu-item>clipboard</button>
+  <button mat-menu-item>police d'écriture</button>
+</mat-menu>

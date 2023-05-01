@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-right-tool-bar',
@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./right-tool-bar.component.scss']
 })
 export class RightToolBarComponent {
-
+  test() {
+    alert("test")
+  }
 }
