@@ -10,6 +10,11 @@ import {MatDialogModule} from "@angular/material/dialog";
 import {MatIconModule} from "@angular/material/icon";
 import {HttpClientModule} from "@angular/common/http";
 import { HomeComponent } from './home/home.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatGridListModule} from '@angular/material/grid-list';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatFormFieldModule} from '@angular/material/form-field';
+import { MatSelectModule} from "@angular/material/select";
 
 @NgModule({
   declarations: [
@@ -21,10 +26,15 @@ import { HomeComponent } from './home/home.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    MatToolbarModule,
+    MatGridListModule,
     MatButtonModule,
     MatDialogModule,
     MatIconModule,
     HttpClientModule,
+    MatSidenavModule,
+    MatFormFieldModule,
+    MatSelectModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
