@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class EditorComponent {
 
+  ChangeBackground() {
+    this.background =="red" ? this.background="blue" : this.background="red";
+  }
+
+  background = "white"
 }

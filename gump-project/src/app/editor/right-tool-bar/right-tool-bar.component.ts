@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, Output, EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'app-right-tool-bar',
@@ -6,6 +6,9 @@ import {Component} from '@angular/core';
   styleUrls: ['./right-tool-bar.component.scss']
 })
 export class RightToolBarComponent {
+
+  @Output() eventTest = new EventEmitter();
+
   test() {
     this.background = "blue"
   }
