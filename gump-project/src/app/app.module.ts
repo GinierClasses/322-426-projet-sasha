@@ -11,13 +11,20 @@ import {MatIconModule} from "@angular/material/icon";
 import {HttpClientModule} from "@angular/common/http";
 import { HomeComponent } from './home/home.component';
 import { EditorComponent } from './editor/editor.component';
-
+import { ToolbarComponent } from './editor/toolbar/toolbar.component';
+import {MatDividerModule} from "@angular/material/divider";
+import {MatTooltipModule} from "@angular/material/tooltip";
+import { ColorPickerComponent } from './commons/color-picker/color-picker.component';
+import {NgxColorsModule} from "ngx-colors";
+import {FormsModule} from "@angular/forms";
 @NgModule({
   declarations: [
     AppComponent,
     AlertPopupComponent,
     HomeComponent,
     EditorComponent,
+    ToolbarComponent,
+    ColorPickerComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,8 +34,11 @@ import { EditorComponent } from './editor/editor.component';
     MatDialogModule,
     MatIconModule,
     HttpClientModule,
+    MatDividerModule,
+    MatTooltipModule,
+    NgxColorsModule,
+    FormsModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {
