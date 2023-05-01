@@ -7,6 +7,26 @@ import {Component} from '@angular/core';
 })
 export class RightToolBarComponent {
   test() {
-    alert("test")
+    this.background = "blue"
+  }
+
+  pinceau = "pinceau"
+
+  background = "red";
+
+  ToBlue() {
+    this.background = "blue";
+  }
+
+  ToGreen() {
+    this.background = "green"
+  }
+
+  ToRed() {
+    this.background = "red"
+  }
+
+  ToYellow() {
+    this.background = "yellow"
   }
 }
