@@ -12,7 +12,7 @@ import {HttpClientModule} from "@angular/common/http";
 import { HomeComponent } from './home/home.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatGridListModule} from '@angular/material/grid-list';
-import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatSidenavModule} from '@angular/material/sidenav';
 import { MatFormFieldModule} from '@angular/material/form-field';
 import { MatSelectModule} from "@angular/material/select";
 
@@ -35,6 +35,7 @@ import { MatSelectModule} from "@angular/material/select";
     MatSidenavModule,
     MatFormFieldModule,
     MatSelectModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

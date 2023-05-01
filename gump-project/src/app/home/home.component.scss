@@ -1,27 +1,80 @@
+.mat-toolbar{
+  font: 500 45px Roboto, sans-serif;
+}
 .example-card {
   max-width: 400px;
 }
 
-.example-header-image {
-  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
-  background-size: cover;
-}
-.example-spacer {
-  flex: 1 1 auto;
-}
 mat-grid-tile {
   background: lightblue;
 }
-.example-container {
-  width: 400px;
-  height: 200px;
-  margin: 12px;
-  border: 1px solid #555;
+
+.sidebar {
+  position: relative;
+  height: 100%;
+  min-height: auto;
+  overflow: auto;
+  width: 180px;
+  border-right: 1px solid black; // BLack bar on right
+
+  ul {
+    display: block;
+    list-style: none;
+
+    li {
+      a {
+        display: block;
+        padding: 10px 10px;
+
+        i {
+          font-size: 24px;
+          float: left;
+          margin-right: 15px;
+          line-height: 30px;
+          width: 30px;
+          text-align: center;
+        }
+
+        button {
+          line-height: 40px;
+          position: relative;
+          height: auto;
+          width: 160px;
+        }
+      }
+    }
+  }
+}
+mat-toolbar {
+  background: #004a9f;
+  color: white;
 }
 
-mat-drawer-content {
-  padding: 12px;
+mat-sidenav {
+  margin: 16px;
+  width: 200px;
+  border-right: none;
+  background: #002b5c;
+  color: white;
+  border-radius: 10px;
+  padding: 16px;
+  text-align: center;
+}
+
+.content {
+  height: calc(100vh - 98px);
+  border-radius: 10px;
+  margin: 16px;
+  margin-left: 32px;
+
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 2rem;
+  color: lightgray;
+}
+
+mat-sidenav-container {
+  height: calc(100vh - 65px);
 }

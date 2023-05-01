@@ -15,52 +15,67 @@
   </mat-toolbar>
 </p>
 -->
-<p>
-  <mat-toolbar color="warn">
+<p style="margin: 0px">
+  <mat-toolbar color="primary">
     <!-- <mat-toolbar color="primary">-->
     <span>Gump</span>
   </mat-toolbar>
 </p>
-<mat-drawer-container class="example-container" [hasBackdrop]="hasBackdrop.value">
-  <mat-drawer #drawer [mode]="mode.value">I'm a drawer</mat-drawer>
-  <mat-drawer-content>
-    <mat-form-field appearance="fill">
-      <mat-label>Sidenav mode</mat-label>
-      <mat-select #mode value="side">
-        <mat-option value="side">Side</mat-option>
-        <mat-option value="over">Over</mat-option>
-        <mat-option value="push">Push</mat-option>
-      </mat-select>
-    </mat-form-field>
-    <mat-form-field appearance="fill">
-      <mat-label>Has backdrop</mat-label>
-      <mat-select #hasBackdrop>
-        <mat-option>Unset</mat-option>
-        <mat-option [value]="true">True</mat-option>
-        <mat-option [value]="false">False</mat-option>
-      </mat-select>
-    </mat-form-field>
-    <button mat-raised-button (click)="drawer.toggle()">Toggle drawer</button>
-  </mat-drawer-content>
-</mat-drawer-container>
+<div>
+  <div class="sidebar">
+    <ul>
+      <li>
+        <a href="">
+          <i class="material-icons"> </i>
+          <button mat-raised-button>Nouveau fichier</button>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <i class="material-icons"> </i>
+          <button mat-raised-button>Ouvrir</button>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <i class="material-icons"> </i>
+          <button mat-raised-button>Acceuil</button>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <i class="material-icons"> </i>
+          <button mat-raised-button>Formation</button>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <i class="material-icons"> </i>
+          <button mat-raised-button>Partager</button>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <i class="material-icons"> </i>
+          <button mat-raised-button>Vos Fichiers</button>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <i class="material-icons"> </i>
+          <button mat-raised-button>Supprimés</button>
+        </a>
+      </li>
+    </ul>
+  </div>
 
+  <mat-grid-list cols="5" rowHeight="2:1">
+    <mat-grid-tile>1</mat-grid-tile>
+    <mat-grid-tile>2</mat-grid-tile>
+    <mat-grid-tile>3</mat-grid-tile>
+  </mat-grid-list>
+  <mat-grid-list cols="6" rowHeight="3:1">
+    <mat-grid-tile>4</mat-grid-tile>
+</mat-grid-list>
+</div>
 
-<button mat-raised-button>Basic</button>
-<mat-grid-list cols="3" rowHeight="2:1">
-  <mat-grid-tile><button mat-raised-button>Basic</button></mat-grid-tile>
-  <mat-grid-tile>2</mat-grid-tile>
-  <mat-grid-tile>3</mat-grid-tile>
-</mat-grid-list>
-<mat-grid-list cols="6" rowHeight="3:1">
-  <mat-grid-tile>1</mat-grid-tile>
-</mat-grid-list>
-<!--On home.componets.ts for change colors, texts or position -->
-<mat-grid-list cols="5" rowHeight="100px">
-  <mat-grid-tile
-    *ngFor="let tile of tiles"
-    [colspan]="tile.cols"
-    [rowspan]="tile.rows"
-    [style.background]="tile.color">
-    {{tile.text}}
-  </mat-grid-tile>
-</mat-grid-list>
