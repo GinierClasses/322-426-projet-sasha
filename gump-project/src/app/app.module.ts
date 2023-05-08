@@ -15,6 +15,7 @@ import { RightToolBarComponent } from './editor/right-tool-bar/right-tool-bar.co
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatExpansionModule} from "@angular/material/expansion";
 import {MatMenuModule} from "@angular/material/menu";
+import {NgOptimizedImage} from "@angular/common";
 
 @NgModule({
   declarations: [
@@ -24,18 +25,19 @@ import {MatMenuModule} from "@angular/material/menu";
     EditorComponent,
     RightToolBarComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatButtonModule,
-    MatDialogModule,
-    MatIconModule,
-    HttpClientModule,
-    MatToolbarModule,
-    MatExpansionModule,
-    MatMenuModule,
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MatButtonModule,
+        MatDialogModule,
+        MatIconModule,
+        HttpClientModule,
+        MatToolbarModule,
+        MatExpansionModule,
+        MatMenuModule,
+        NgOptimizedImage,
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
