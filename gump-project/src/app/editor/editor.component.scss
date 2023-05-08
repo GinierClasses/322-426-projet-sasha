@@ -2,7 +2,7 @@
   display: grid;
   gap: 1rem;
   grid-template-areas:
-    "top-bar top-bar top-bar"
+    "top-bar top-bar menu-sidebar"
     "toolbar image menu-sidebar";
   width: 100%;
   min-height: 100vh;
