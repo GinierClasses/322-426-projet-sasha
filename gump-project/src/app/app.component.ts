@@ -15,7 +15,7 @@ export class AppComponent {
   svgIcons = ['success', 'error', 'warning', 'info', 'instagram', 'linkedin', 'facebook'];
   constructor(
     public dialog: MatDialog,
- //   private alertService: AlertService,
+    private alertService: AlertService,
     private matIconRegistry: MatIconRegistry,
     private domSanitizer: DomSanitizer,
   ) {
@@ -33,9 +33,9 @@ export class AppComponent {
     }
   }
 
- // test() {
- //   this.alertService.alert('test', 'test', 'info');
- // }
+  test() {
+    this.alertService.alert('test', 'test', 'info');
+  }
 
   openShareWindow(): void {
     const dialogRef = this.dialog.open(ShareComponent, {
