@@ -15,67 +15,104 @@
   </mat-toolbar>
 </p>
 -->
-<p style="margin: 0px">
-  <mat-toolbar color="primary">
-    <!-- <mat-toolbar color="primary">-->
-    <span>Gump</span>
-  </mat-toolbar>
-</p>
 <div>
-  <div class="sidebar">
-    <ul>
-      <li>
-        <a href="">
-          <i class="material-icons"> </i>
-          <button mat-raised-button>Nouveau fichier</button>
-        </a>
-      </li>
-      <li>
-        <a href="">
-          <i class="material-icons"> </i>
-          <button mat-raised-button>Ouvrir</button>
-        </a>
-      </li>
-      <li>
-        <a href="">
-          <i class="material-icons"> </i>
-          <button mat-raised-button>Acceuil</button>
-        </a>
-      </li>
-      <li>
-        <a href="">
-          <i class="material-icons"> </i>
-          <button mat-raised-button>Formation</button>
-        </a>
-      </li>
-      <li>
-        <a href="">
-          <i class="material-icons"> </i>
-          <button mat-raised-button>Partager</button>
-        </a>
-      </li>
-      <li>
-        <a href="">
-          <i class="material-icons"> </i>
-          <button mat-raised-button>Vos Fichiers</button>
-        </a>
-      </li>
-      <li>
-        <a href="">
-          <i class="material-icons"> </i>
-          <button mat-raised-button>Supprimés</button>
-        </a>
-      </li>
-    </ul>
-  </div>
+  <p style="margin: 0px">
+    <mat-toolbar color="primary">
+      <!-- <mat-toolbar color="primary">-->
+      <span>Gump</span>
+    </mat-toolbar>
+</p>
+</div>
+<div class="page-sidebar">
+  <ul>
+    <li>
+      <a>
+        <button mat-raised-button style="background: #72a3f9" href="" >Nouveau fichier</button>
+      </a>
+    </li>
+    <li>
+      <a>
+        <button mat-raised-button href="">Ouvrir</button>
+      </a>
+    </li>
+    <li>
+      <a>
+        <mat-divider style="border-top-color: black"></mat-divider>
+      </a>
+    </li>
+    <li>
+      <a>
+        <button mat-raised-button style="background: #d4e4fd" href="">Acceuil</button>
+      </a>
+    </li>
+    <li>
+      <a>
+        <button mat-raised-button href="">Formation</button>
+      </a>
+    </li>
+    <li>
+      <a>
+        <h3>FICHIERS</h3>
+      </a>
+    </li>
+    <li>
+      <a>
+        <button mat-raised-button href="">Partager</button>
+      </a>
+    </li>
+    <li>
+      <a>
+        <button mat-raised-button href="">Vos Fichiers</button>
+      </a>
+    </li>
+    <li>
+      <a>
+        <button mat-raised-button href="">Supprimés</button>
+      </a>
+    </li>
+  </ul>
+</div>
+<div class="col-md-12">
+  <mat-card-title style="font-size: xx-large">Bienvenue dans Gump</mat-card-title>
+  <mat-divider style="border-top-color: black"></mat-divider>
 
-  <mat-grid-list cols="5" rowHeight="2:1">
+</div>
+<div class="col-md-12">
+  <mat-card class="mat-mdc-card mdc-card">
+    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+    <div>
+      <mat-card-header class="mat-mdc-card-header">
+        <mat-card-title>Shiba Inu</mat-card-title>
+        <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>
+          The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+          A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+          bred for hunting.
+        </p>
+      </mat-card-content>
+    </div>
+  </mat-card>
+</div>
+
+<div class="col-md-12">
+  <mat-grid-list cols="3" rowHeight="2:1">
     <mat-grid-tile>1</mat-grid-tile>
     <mat-grid-tile>2</mat-grid-tile>
     <mat-grid-tile>3</mat-grid-tile>
-  </mat-grid-list>
-  <mat-grid-list cols="6" rowHeight="3:1">
     <mat-grid-tile>4</mat-grid-tile>
-</mat-grid-list>
+    <mat-grid-tile>5</mat-grid-tile>
+    <mat-grid-tile>6</mat-grid-tile>
+  </mat-grid-list>
 </div>
-
+<!--
+<mat-grid-list cols="5" rowHeight="2:1">
+        <mat-grid-tile>1</mat-grid-tile>
+        <mat-grid-tile>2</mat-grid-tile>
+        <mat-grid-tile>3</mat-grid-tile>
+      </mat-grid-list>
+      <mat-grid-list cols="6" rowHeight="3:1">
+        <mat-grid-tile>4</mat-grid-tile>
+      </mat-grid-list>
+-->
