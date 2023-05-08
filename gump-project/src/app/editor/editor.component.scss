@@ -10,6 +10,8 @@
 
 .top-bar {
   grid-area: top-bar;
+  background: aqua;
+  min-height: 5%;
 }
 
 .toolbar {
@@ -27,5 +29,5 @@
   border-radius: 10px;
   margin-left: 83%;
   background: gray;
-  height: 15cm;
+  min-height: 80%;
 }

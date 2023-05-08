@@ -1,34 +1,62 @@
-<button mat-button [matMenuTriggerFor]="aboveMenu">{{curentMenu}}</button>
+<div class="container">
 
-<mat-menu
-  #aboveMenu="matMenu"
-  yPosition="above" #appMenu="matMenu"
-  [style.background]="background">
-  <button mat-menu-item (click)="showPinceau()">pinceau</button>
-  <button mat-menu-item (click)="showImage()">image</button>
-  <button mat-menu-item (click)="showClipboard()">clipboard</button>
-  <button mat-menu-item (click)="showPolice()">police d'écriture</button>
-</mat-menu>
+  <button mat-button [matMenuTriggerFor]="aboveMenu">{{currentMenu}}</button>
 
-<div class="imageContainer" *ngIf="IsPinceau">
-  <img class="image" ngSrc="./pinceau.png" width="64" height="64">
-  <img class="image" src="./pinceau.png" width="64">
-  <img class="image" src="./pinceau.png" width="64">
-  <img class="image" src="./pinceau.png" width="64">
-  <img class="image" src="./pinceau.png" width="64">
-</div>
+  <mat-menu
+    #aboveMenu="matMenu"
+    yPosition="above">
 
-<div class="imageContainer" *ngIf="IsImage">
-  <img class="image" src="./pinceau.png" width="64">
-  <img class="image" src="./pinceau.png" width="64">
-</div>
+    <button mat-menu-item (click)="showPinceau()">
 
-<div class="imageContainer" *ngIf="IsClipboard">
-  <img class="image" src="./pinceau.png" width="64">
-  <img class="image" src="./pinceau.png" width="64">
-  <img class="image" src="./pinceau.png" width="64">
-  <img class="image" src="./pinceau.png" width="64">
-</div>
-<div class="imageContainer" *ngIf="IsPolice">
+      <img alt="pinceau" class="image" height="32" ngSrc="assets/icons/paint.svg" width="32">
+
+    </button>
+
+    <button mat-menu-item (click)="showImage()">
+
+      <img alt="pinceau" class="image" height="32" ngSrc="assets/icons/paint.svg" width="32">
+
+    </button>
+
+    <button mat-menu-item (click)="showClipboard()">
+
+      <img alt="pinceau" class="image" height="32" ngSrc="assets/icons/paint.svg" width="32">
+
+    </button>
+
+    <button mat-menu-item (click)="showPolice()">
+
+      <img alt="pinceau" class="image" height="32" ngSrc="assets/icons/paint.svg" width="32">
+
+    </button>
+
+  </mat-menu>
+
+  <div class="imageContainer" *ngIf="isPinceau">
+
+    <img alt="pinceau" class="image" height="64" ngSrc="assets/icons/paint.svg" width="64">
+    <img alt="pinceau" class="image" height="64" ngSrc="assets/icons/paint.svg" width="64">
+    <img alt="pinceau" class="image" height="64" ngSrc="assets/icons/paint.svg" width="64">
+
+  </div>
+
+  <div class="imageContainer" *ngIf="isImage">
+
+    <img alt="pinceau" class="image" height="64" ngSrc="assets/icons/paint.svg" width="64">
+
+  </div>
+
+  <div class="imageContainer" *ngIf="isClipboard">
+
+    <img alt="pinceau" class="image" height="64" ngSrc="assets/icons/paint.svg" width="64">
+    <img alt="pinceau" class="image" height="64" ngSrc="assets/icons/paint.svg" width="64">
+    <img alt="pinceau" class="image" height="64" ngSrc="assets/icons/paint.svg" width="64">
+    <img alt="pinceau" class="image" height="64" ngSrc="assets/icons/paint.svg" width="64">
+
+  </div>
+
+  <div class="imageContainer" *ngIf="isPolice">
+
+  </div>
 
 </div>

@@ -1,4 +1,4 @@
-import {Component, Output, EventEmitter} from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-right-tool-bar',
@@ -7,64 +7,41 @@ import {Component, Output, EventEmitter} from '@angular/core';
 })
 export class RightToolBarComponent {
 
-  @Output() eventTest = new EventEmitter();
-
-  test() {
-    this.background = "#80A1C1"
-  }
-
-  background = "#721817";
-  IsPinceau = true;
-  IsImage = false;
-  IsPolice = false;
-  IsClipboard = false;
-  curentMenu="pinceau";
-
-  ToBlue() {
-    this.background = "#80A1C1";
-  }
-
-  ToGreen() {
-    this.background = "#5B7553"
-  }
-
-  ToRed() {
-    this.background = "#721817"
-  }
-
-  ToYellow() {
-    this.background = "#F4E285"
-  }
+  isPinceau = true;
+  isImage = false;
+  isPolice = false;
+  isClipboard = false;
+  currentMenu = "pinceau";
 
   showImage() {
-    this.IsPinceau = this.IsPinceau ? false : false;
-    this.IsClipboard = this.IsClipboard ? false : false;
-    this.IsPolice = this.IsPolice ? false : false;
-    this.IsImage = true;
-    this.curentMenu="image";
+    this.isPinceau = this.isPinceau ? false : false;
+    this.isClipboard = this.isClipboard ? false : false;
+    this.isPolice = this.isPolice ? false : false;
+    this.isImage = true;
+    this.currentMenu = "image";
   }
 
   showClipboard() {
-    this.IsPinceau = this.IsPinceau ? false : false;
-    this.IsImage = this.IsImage ? false : false;
-    this.IsPolice = this.IsPolice ? false : false;
-    this.IsClipboard = true;
-    this.curentMenu="clipboard";
+    this.isPinceau = this.isPinceau ? false : false;
+    this.isImage = this.isImage ? false : false;
+    this.isPolice = this.isPolice ? false : false;
+    this.isClipboard = true;
+    this.currentMenu = "clipboard";
   }
 
   showPolice() {
-    this.IsPinceau = this.IsPinceau ? false : false;
-    this.IsImage = this.IsImage ? false : false;
-    this.IsClipboard = this.IsClipboard ? false : false;
-    this.IsPolice = true;
-    this.curentMenu="police";
+    this.isPinceau = this.isPinceau ? false : false;
+    this.isImage = this.isImage ? false : false;
+    this.isClipboard = this.isClipboard ? false : false;
+    this.isPolice = true;
+    this.currentMenu = "police";
   }
 
   showPinceau() {
-    this.IsClipboard = this.IsClipboard ? false : false;
-    this.IsImage = this.IsImage ? false : false;
-    this.IsPolice = this.IsPolice ? false : false;
-    this.IsPinceau = true;
-    this.curentMenu="pinceau";
+    this.isClipboard = this.isClipboard ? false : false;
+    this.isImage = this.isImage ? false : false;
+    this.isPolice = this.isPolice ? false : false;
+    this.isPinceau = true;
+    this.currentMenu = "pinceau";
   }
 }

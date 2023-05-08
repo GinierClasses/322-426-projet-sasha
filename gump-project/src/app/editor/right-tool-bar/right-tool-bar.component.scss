@@ -1,13 +1,13 @@
-a{
-  background: white;
-  margin: 8px;
-  border-radius: 10px;
-  height: 1.5cm;
-}
-
-.imageContainer{
+.imageContainer {
   display: inline-grid;
 }
-mat-menu{
+
+mat-menu {
   vertical-align: top;
+  align-items: center;
+}
+
+.container {
+  display: inline-grid;
+  align-self: stretch;
 }
