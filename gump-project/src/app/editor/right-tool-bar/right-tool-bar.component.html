@@ -1,11 +1,34 @@
-<button mat-button [matMenuTriggerFor]="aboveMenu">Above</button>
+<button mat-button [matMenuTriggerFor]="aboveMenu">{{curentMenu}}</button>
+
 <mat-menu
   #aboveMenu="matMenu"
   yPosition="above" #appMenu="matMenu"
   [style.background]="background">
-  <button mat-menu-item (click)="eventTest.emit()" [style.background-color]="background">{{pinceau}}</button>
-  <button mat-menu-item (click)="ToGreen()">image</button>
-  <button mat-menu-item (click)="ToRed()">clipboard</button>
-  <button mat-menu-item (click)="ToYellow()">police d'écriture</button>
+  <button mat-menu-item (click)="showPinceau()">pinceau</button>
+  <button mat-menu-item (click)="showImage()">image</button>
+  <button mat-menu-item (click)="showClipboard()">clipboard</button>
+  <button mat-menu-item (click)="showPolice()">police d'écriture</button>
 </mat-menu>
-<
+
+<div class="imageContainer" *ngIf="IsPinceau">
+  <img class="image" src="./pinceau.png" width="64">
+  <img class="image" src="./pinceau.png" width="64">
+  <img class="image" src="./pinceau.png" width="64">
+  <img class="image" src="./pinceau.png" width="64">
+  <img class="image" src="./pinceau.png" width="64">
+</div>
+
+<div class="imageContainer" *ngIf="IsImage">
+  <img class="image" src="./pinceau.png" width="64">
+  <img class="image" src="./pinceau.png" width="64">
+</div>
+
+<div class="imageContainer" *ngIf="IsClipboard">
+  <img class="image" src="./pinceau.png" width="64">
+  <img class="image" src="./pinceau.png" width="64">
+  <img class="image" src="./pinceau.png" width="64">
+  <img class="image" src="./pinceau.png" width="64">
+</div>
+<div class="imageContainer" *ngIf="IsPolice">
+
+</div>

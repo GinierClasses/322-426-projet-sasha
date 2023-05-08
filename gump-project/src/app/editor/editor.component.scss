@@ -2,7 +2,7 @@
   display: grid;
   gap: 1rem;
   grid-template-areas:
-    "top-bar top-bar menu-sidebar"
+    "top-bar top-bar top-bar"
     "toolbar image menu-sidebar";
   width: 100%;
   min-height: 100vh;
@@ -25,5 +25,7 @@
   display: inline-grid;
   padding: 10px;
   border-radius: 10px;
+  margin-left: 83%;
+  background: gray;
+  height: 15cm;
 }
-
