@@ -5,7 +5,7 @@
     "top-bar top-bar top-bar"
     "toolbar image menu-sidebar";
   width: 100%;
-  min-height: 100vh;
+  height: 100%;
 }
 
 .top-bar {
@@ -27,7 +27,7 @@
   display: inline-grid;
   padding: 10px;
   border-radius: 10px;
-  margin-left: 83%;
+  margin-left: 82%;
   background: gray;
-  min-height: 80%;
+  height: 100%;
 }
