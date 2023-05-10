@@ -19,22 +19,21 @@
         </p>
       </mat-card-content>
       <mat-card-actions>
-        <button mat-button>Parcourir les tutoriels</button>
+        <button mat-button routerLink="/formation">Parcourir les tutoriels</button>
       </mat-card-actions>
     </div>
   </mat-card>
 </div>
-<div class="col-md-12">
-  <mat-card-title style="font-size: xx-large">Vos Fichiers</mat-card-title>
-  <mat-divider style="border-top-color: black"></mat-divider>
+<div class="col-md-12" style="padding-top: 2%">
+  <mat-card-title style="font-size: xx-large">Récent</mat-card-title>
 
 </div>
 <div class="col-md-3">
   <div class="m-card card-down-media" style="border-radius: 4px">
     <img class="card-down-media" src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
     <div class="card-down__actions">
-      <button class="button-card">Ouvrir</button>
-      <button class="button-card2">Supprimé</button>
+      <button class="button-card" routerLink="/ouvrir">Ouvrir</button>
+      <button class="button-card2" routerLink="/supprimes">Supprimé</button>
     </div>
   </div>
 </div>

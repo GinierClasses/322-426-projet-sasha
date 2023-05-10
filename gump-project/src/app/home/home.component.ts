@@ -8,10 +8,14 @@ import {Router} from "@angular/router";
 })
 export class HomeComponent implements OnInit {
 
+  isNouveauFichier = false;
+  isOuvrir = false;
   isContent = false;
   isFormation = false;
-  isSupprimes = false;
+  isPartager = false;
   isVosFichiers = false;
+  isSupprimes = false;
+
 
   constructor(
     private router: Router
@@ -22,17 +26,26 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     const currentRoute = this.router.url;
     if (currentRoute) {
+      if (currentRoute == '/nouveauFichier') {
+        this.isNouveauFichier = true;
+      }
+      if (currentRoute == '/ouvrir') {
+        this.isOuvrir = true;
+      }
       if (currentRoute == '/') {
         this.isContent = true;
       }
       if (currentRoute == '/formation') {
         this.isFormation = true;
       }
-      if (currentRoute == '/supprimes') {
-        this.isSupprimes = true;
+      if (currentRoute == '/partager') {
+        this.isPartager = true;
       }
       if (currentRoute == '/vosFichiers') {
         this.isVosFichiers = true;
+      }
+      if (currentRoute == '/supprimes') {
+        this.isSupprimes = true;
       }
     }
   }

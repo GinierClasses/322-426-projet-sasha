@@ -4,6 +4,14 @@ import {HomeComponent} from "./home/home.component";
 
 const routes: Routes = [
   {
+    path: 'nouveauFichier',
+    component: HomeComponent
+  },
+  {
+    path: 'ouvrir',
+    component: HomeComponent
+  },
+  {
     path: '',
     component: HomeComponent,
   },
@@ -12,13 +20,17 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: 'supprimes',
+    path: 'partager',
     component: HomeComponent
   },
   {
     path: 'vosFichiers',
     component: HomeComponent
   },
+  {
+    path: 'supprimes',
+    component: HomeComponent
+  }
 ];
 
 @NgModule({

@@ -10,12 +10,12 @@
   <ul>
     <li>
       <a>
-        <div class="nav-button" style="background: #72a3f9" [ngClass]="{'nav-button-active': isCurrentRoute('/nouveauFichier')}" >Nouveau fichier</div>
+        <div class="nav-button" style="background: #72a3f9" routerLink="/nouveauFichier">Nouveau fichier</div>
       </a>
     </li>
     <li>
       <a>
-        <div class="nav-button" [ngClass]="{'nav-button-active': isCurrentRoute('/ouvrir')}">Ouvrir</div>
+        <div class="nav-button" [ngClass]="{'nav-button-active': isCurrentRoute('/ouvrir')}" routerLink="/ouvrir">Ouvrir</div>
       </a>
     </li>
     <li>
