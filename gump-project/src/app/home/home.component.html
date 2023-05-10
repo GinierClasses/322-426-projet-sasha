@@ -1,20 +1,3 @@
-<!--
-<p>
-  <mat-toolbar color="primary">
-    <mat-toolbar-row>
-      <span>My App</span>
-      <span class="example-spacer"></span>
-      <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-        <mat-icon>menu</mat-icon>
-      </button>
-    </mat-toolbar-row>
-
-    <mat-toolbar-row>
-      <span>Second Line</span>
-    </mat-toolbar-row>
-  </mat-toolbar>
-</p>
--->
 <div>
   <p style="margin: 0px">
     <mat-toolbar color="primary">
@@ -27,12 +10,12 @@
   <ul>
     <li>
       <a>
-        <div class="nav-button" style="background: #72a3f9" href="" >Nouveau fichier</div>
+        <div class="nav-button" style="background: #72a3f9" [ngClass]="{'nav-button-active': isCurrentRoute('/nouveauFichier')}" >Nouveau fichier</div>
       </a>
     </li>
     <li>
       <a>
-        <div class="nav-button" href="">Ouvrir</div>
+        <div class="nav-button" [ngClass]="{'nav-button-active': isCurrentRoute('/ouvrir')}">Ouvrir</div>
       </a>
     </li>
     <li>
@@ -42,12 +25,12 @@
     </li>
     <li>
       <a>
-        <div class="nav-button-active" href="">Acceuil</div>
+        <div class="nav-button" [ngClass]="{'nav-button-active': isCurrentRoute('/')}" routerLink="/">Acceuil</div>
       </a>
     </li>
     <li>
       <a>
-        <div class="nav-button" href="">Formation</div>
+        <div class="nav-button" [ngClass]="{'nav-button-active': isCurrentRoute('/formation')}" routerLink="/formation">Formation</div>
       </a>
     </li>
     <li>
@@ -57,62 +40,22 @@
     </li>
     <li>
       <a>
-        <div class="nav-button" href="">Partager</div>
+        <div class="nav-button" [ngClass]="{'nav-button-active': isCurrentRoute('/partager')}" routerLink="/partager">Partager</div>
       </a>
     </li>
     <li>
       <a>
-        <div class="nav-button" href="">Vos Fichiers</div>
+        <div class="nav-button" [ngClass]="{'nav-button-active': isCurrentRoute('/vosFichiers')}" routerLink="/vosFichiers">Vos Fichiers</div>
       </a>
     </li>
     <li>
       <a>
-        <div class="nav-button" href="">Supprimés</div>
+        <div class="nav-button" [ngClass]="{'nav-button-active': isCurrentRoute('/supprimes')}" routerLink="/supprimes">Supprimés</div>
       </a>
     </li>
   </ul>
 </div>
-<div class="col-md-12">
-  <mat-card-title style="font-size: xx-large">Bienvenue dans Gump</mat-card-title>
-  <mat-divider style="border-top-color: black"></mat-divider>
-
-</div>
-<div class="col-md-12">
-  <mat-card class="mat-mdc-card mdc-card">
-    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-    <div>
-      <mat-card-header class="mat-mdc-card-header">
-        <mat-card-title>Shiba Inu</mat-card-title>
-        <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-      </mat-card-header>
-      <mat-card-content>
-        <p>
-          The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-          A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-          bred for hunting.
-        </p>
-      </mat-card-content>
-    </div>
-  </mat-card>
-</div>
-
-<div class="col-md-12">
-  <mat-grid-list cols="3" rowHeight="2:1">
-    <mat-grid-tile>1</mat-grid-tile>
-    <mat-grid-tile>2</mat-grid-tile>
-    <mat-grid-tile>3</mat-grid-tile>
-    <mat-grid-tile>4</mat-grid-tile>
-    <mat-grid-tile>5</mat-grid-tile>
-    <mat-grid-tile>6</mat-grid-tile>
-  </mat-grid-list>
-</div>
-<!--
-<mat-grid-list cols="5" rowHeight="2:1">
-        <mat-grid-tile>1</mat-grid-tile>
-        <mat-grid-tile>2</mat-grid-tile>
-        <mat-grid-tile>3</mat-grid-tile>
-      </mat-grid-list>
-      <mat-grid-list cols="6" rowHeight="3:1">
-        <mat-grid-tile>4</mat-grid-tile>
-      </mat-grid-list>
--->
+<app-home-content *ngIf="isContent"></app-home-content>
+<app-home-formation *ngIf="isFormation"></app-home-formation>
+<app-home-supprimes *ngIf="isSupprimes"></app-home-supprimes>
+<app-home-vos-fichiers *ngIf="isVosFichiers"></app-home-vos-fichiers>

@@ -16,7 +16,7 @@ export class AppComponent {
     private matIconRegistry: MatIconRegistry,
     private domSanitizer: DomSanitizer,
   ) {
-    for (let icon of this.svgIcons) {
+    for (const icon of this.svgIcons) {
       this.matIconRegistry.addSvgIcon(icon,
         this.domSanitizer.bypassSecurityTrustResourceUrl("assets/icons/" + icon + ".svg")
       );

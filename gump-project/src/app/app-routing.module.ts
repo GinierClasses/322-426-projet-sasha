@@ -6,7 +6,19 @@ const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
-  }
+  },
+  {
+    path: 'formation',
+    component: HomeComponent
+  },
+  {
+    path: 'supprimes',
+    component: HomeComponent
+  },
+  {
+    path: 'vosFichiers',
+    component: HomeComponent
+  },
 ];
 
 @NgModule({

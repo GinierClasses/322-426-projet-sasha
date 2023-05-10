@@ -18,12 +18,20 @@ import {MatSelectModule} from "@angular/material/select";
 import {MatCardModule} from "@angular/material/card";
 import {MatDividerModule} from "@angular/material/divider";
 import {MatListModule} from "@angular/material/list";
+import { HomeContentComponent } from './home/home-content/home-content.component';
+import { HomeFormationComponent } from './home/home-formation/home-formation.component';
+import { HomeVosFichiersComponent } from './home/home-vos-fichiers/home-vos-fichiers.component';
+import { HomeSupprimesComponent } from './home/home-supprimes/home-supprimes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AlertPopupComponent,
     HomeComponent,
+    HomeContentComponent,
+    HomeFormationComponent,
+    HomeVosFichiersComponent,
+    HomeSupprimesComponent,
   ],
   imports: [
     BrowserModule,
