@@ -11,6 +11,8 @@ import {MatIconModule} from "@angular/material/icon";
 import {HttpClientModule} from "@angular/common/http";
 import { HomeComponent } from './home/home.component';
 import { EditorComponent } from './editor/editor.component';
+import { TopNavbarComponent } from './editor/top-navbar/top-navbar.component';
+import {matMenuAnimations, MatMenuModule} from "@angular/material/menu";
 
 @NgModule({
   declarations: [
@@ -18,6 +20,7 @@ import { EditorComponent } from './editor/editor.component';
     AlertPopupComponent,
     HomeComponent,
     EditorComponent,
+    TopNavbarComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,6 +30,7 @@ import { EditorComponent } from './editor/editor.component';
     MatDialogModule,
     MatIconModule,
     HttpClientModule,
+    MatMenuModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
