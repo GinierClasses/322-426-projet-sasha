@@ -1,15 +1,18 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
 .imageContainer {
-  display: inline-grid;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
 }
 
 mat-menu {
   vertical-align: top;
   align-items: center;
-}
-
-.container {
-  display: inline-grid;
-  align-self: stretch;
 }
 
 .image{
