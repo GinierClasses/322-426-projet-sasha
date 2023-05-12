@@ -1,10 +1,11 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ToolsService} from "../../services/tools.service";
 import {Tool} from "../../types/tool";
 import {ColorsService} from "../../services/colors.service";
 import {ThemePalette} from "@angular/material/core";
 import {MatDialog} from "@angular/material/dialog";
-import {ColorPickerComponent} from "../../commons/color-picker/color-picker.component";
+import {Shortcut} from "../../types/shortcut";
+import {ShortcutsService} from "../../services/shortcuts.service";
 
 @Component({
   selector: 'app-toolbar',
@@ -14,6 +15,7 @@ import {ColorPickerComponent} from "../../commons/color-picker/color-picker.comp
 export class ToolbarComponent implements OnInit {
 
   tools: Tool[] = [];
+  shortcuts: Shortcut[] = [];
 
   loading: boolean = true;
 
@@ -22,6 +24,7 @@ export class ToolbarComponent implements OnInit {
 
   constructor(
     private toolService: ToolsService,
+    private shortcutsService: ShortcutsService,
     public colors: ColorsService,
     private dialog: MatDialog
   ) {
@@ -30,6 +33,7 @@ export class ToolbarComponent implements OnInit {
   ngOnInit(): void {
     this.loading = true;
     this.tools = this.toolService.getTools();
+    this.shortcuts = this.shortcutsService.getShortcuts();
     this.firstColor = this.colors.getFirstColor();
     this.secondColor = this.colors.getSecondColor();
     this.setUpShortcuts();
@@ -38,8 +42,9 @@ export class ToolbarComponent implements OnInit {
 
   setUpShortcuts(): void {
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'x') {
-        this.switchColors();
+      let swapColorShortcut: Shortcut | undefined = this.shortcuts.find(shortcut => shortcut.action == 'Échanger les couleurs');
+      if (e.key.toLowerCase() == swapColorShortcut?.shortcut.toLowerCase()) {
+        this.swapColors();
       }
       this.tools.forEach(tool => {
         if (e.key == tool.shortcut.toLowerCase()) {
@@ -49,7 +54,7 @@ export class ToolbarComponent implements OnInit {
     });
   }
 
-  switchColors(): void {
+  swapColors(): void {
     const tmp = this.firstColor;
     this.firstColor = this.secondColor;
     this.secondColor = tmp;
@@ -72,9 +77,12 @@ export class ToolbarComponent implements OnInit {
   }
 
   getColorSwapTooltip(): string {
-    let tooltip = `Swap colors | `;
-    let shortcut = 'X';
-    return tooltip + shortcut;
+    let tooltip: string = 'Échanger les couleurs | ';
+    let shortcutObject: Shortcut | undefined = this.shortcuts.find(shortcut => shortcut.action == 'Échanger les couleurs');
+    if (shortcutObject) {
+      tooltip += shortcutObject.shortcut;
+    }
+    return tooltip;
   }
 
 }

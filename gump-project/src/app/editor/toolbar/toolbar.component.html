@@ -18,19 +18,11 @@
   <button mat-button ngx-colors-trigger [(ngModel)]="firstColor" (ngModelChange)="saveColors()">
     <div class="selected-color-button" [ngStyle]="{'background': firstColor}"></div>
   </button>
-  <button mat-button (click)="switchColors()" [matTooltip]="getColorSwapTooltip()" matTooltipShowDelay="1000">
+  <button mat-button (click)="swapColors()" [matTooltip]="getColorSwapTooltip()" matTooltipShowDelay="1000">
     <mat-icon [svgIcon]="'exchange'" class="exchange-icon"></mat-icon>
   </button>
   <button mat-button ngx-colors-trigger [(ngModel)]="secondColor">
     <div class="selected-color-button" [ngStyle]="{'background': secondColor}"></div>
-  </button>
-
-  <!-- Divider -->
-  <mat-divider></mat-divider>
-
-  <!-- Edit -->
-  <button mat-button matTooltip="Edit toolbar configuration" matTooltipShowDelay="1000">
-    <mat-icon [svgIcon]="'edit'"></mat-icon>
   </button>
 
 </div>

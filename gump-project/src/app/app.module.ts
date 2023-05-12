@@ -14,7 +14,6 @@ import { EditorComponent } from './editor/editor.component';
 import { ToolbarComponent } from './editor/toolbar/toolbar.component';
 import {MatDividerModule} from "@angular/material/divider";
 import {MatTooltipModule} from "@angular/material/tooltip";
-import { ColorPickerComponent } from './commons/color-picker/color-picker.component';
 import {NgxColorsModule} from "ngx-colors";
 import {FormsModule} from "@angular/forms";
 @NgModule({
@@ -24,7 +23,6 @@ import {FormsModule} from "@angular/forms";
     HomeComponent,
     EditorComponent,
     ToolbarComponent,
-    ColorPickerComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,7 +35,7 @@ import {FormsModule} from "@angular/forms";
     MatDividerModule,
     MatTooltipModule,
     NgxColorsModule,
-    FormsModule
+    FormsModule,
   ],
   bootstrap: [AppComponent]
 })

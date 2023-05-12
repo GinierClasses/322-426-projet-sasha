@@ -7,7 +7,6 @@ import {CookieService} from "ngx-cookie-service";
 })
 export class ToolsService {
 
-  // tools : selection rectangle, selection cercle, selection lasso, selection magique, déplacement, déplacement de la sélection, pipette, remplissage, pinceau, crayon, formes, texte, dégradé, gomme, dupliquer
   tools: Tool[] = [
     new Tool(0, 'Sélection rectangle', 'tool-rectangle-selection', 'R', 'Sélectionner une zone rectangulaire', true),
     new Tool(1, 'Sélection cercle', 'tool-circle-selection', 'C', 'Sélectionner une zone circulaire', false),
