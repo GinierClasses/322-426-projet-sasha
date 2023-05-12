@@ -10,7 +10,7 @@ import {DomSanitizer} from "@angular/platform-browser";
 })
 export class AppComponent {
   title = 'gump-project';
-  svgIcons = ['success', 'error', 'warning', 'info', 'edit', 'exchange', 'up-arrow', 'down-arrow'];
+  svgIcons = ['success', 'error', 'warning', 'info', 'exchange'];
   toolsSvgIcons = ['tool-circle-selection', 'tool-copy', 'tool-eraser', 'tool-fill-bucket', 'tool-gradient', 'tool-lasso-selection', 'tool-magic-wand', 'tool-move', 'tool-move-selection', 'tool-paintbrush', 'tool-pencil', 'tool-pipette', 'tool-rectangle-selection', 'tool-shapes', 'tool-text'];
   constructor(
     private alertService: AlertService,
