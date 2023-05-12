@@ -13,36 +13,47 @@ import {MatButtonModule} from "@angular/material/button";
 import {MatDialogModule} from "@angular/material/dialog";
 import {MatIconModule} from "@angular/material/icon";
 import {HttpClientModule} from "@angular/common/http";
-import {HomeComponent} from './home/home.component';
+import { HomeComponent } from './home/home.component';
+import { EditorComponent } from './editor/editor.component';
+import { ToolbarComponent } from './editor/toolbar/toolbar.component';
+import {MatDividerModule} from "@angular/material/divider";
+import {MatTooltipModule} from "@angular/material/tooltip";
+import {NgxColorsModule} from "ngx-colors";
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    ShareComponent,
-    AlertPopupComponent,
-    HomeComponent,
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatDialogModule,
-    MatFormFieldModule,
-    MatInputModule,
-    FormsModule,
-    MatButtonModule,
-    MatButtonToggleModule,
-    MatIconModule,
-    HttpClientModule,
-    MatButtonModule,
-    MatDialogModule,
-    MatIconModule,
-    HttpClientModule,
-  ],
-  providers:
-  [],
-  bootstrap:
-  [AppComponent]
+    declarations: [
+      AppComponent,
+      ShareComponent,
+      AlertPopupComponent,
+      HomeComponent,
+      EditorComponent,
+      ToolbarComponent,
+    ],
+    imports: [
+      BrowserModule,
+      AppRoutingModule,
+      BrowserAnimationsModule,
+      MatDialogModule,
+      MatFormFieldModule,
+      MatInputModule,
+      FormsModule,
+      MatButtonModule,
+      MatButtonToggleModule,
+      MatIconModule,
+      HttpClientModule,
+      MatButtonModule,
+      MatDialogModule,
+      MatIconModule,
+      HttpClientModule,
+      MatDividerModule,
+      MatTooltipModule,
+      NgxColorsModule,
+      FormsModule,
+    ],
+    bootstrap: [AppComponent],
+    providers:
+[],
+
 })
 
 export class AppModule {
