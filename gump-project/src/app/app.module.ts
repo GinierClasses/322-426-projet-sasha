@@ -11,6 +11,11 @@ import {MatIconModule} from "@angular/material/icon";
 import {HttpClientModule} from "@angular/common/http";
 import { HomeComponent } from './home/home.component';
 import { EditorComponent } from './editor/editor.component';
+import { RightToolBarComponent } from './editor/right-tool-bar/right-tool-bar.component';
+import {MatToolbarModule} from "@angular/material/toolbar";
+import {MatExpansionModule} from "@angular/material/expansion";
+import {MatMenuModule} from "@angular/material/menu";
+import {NgOptimizedImage} from "@angular/common";
 
 @NgModule({
   declarations: [
@@ -18,16 +23,21 @@ import { EditorComponent } from './editor/editor.component';
     AlertPopupComponent,
     HomeComponent,
     EditorComponent,
+    RightToolBarComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatButtonModule,
-    MatDialogModule,
-    MatIconModule,
-    HttpClientModule,
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MatButtonModule,
+        MatDialogModule,
+        MatIconModule,
+        HttpClientModule,
+        MatToolbarModule,
+        MatExpansionModule,
+        MatMenuModule,
+        NgOptimizedImage,
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

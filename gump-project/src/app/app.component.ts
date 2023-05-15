@@ -10,13 +10,13 @@ import {DomSanitizer} from "@angular/platform-browser";
 })
 export class AppComponent {
   title = 'gump-project';
-  svgIcons = ['success', 'error', 'warning', 'info'];
+  svgIcons = ['success', 'error', 'warning', 'info','paint'];
   constructor(
     private alertService: AlertService,
     private matIconRegistry: MatIconRegistry,
     private domSanitizer: DomSanitizer,
   ) {
-    for (let icon of this.svgIcons) {
+    for (const icon of this.svgIcons) {
       this.matIconRegistry.addSvgIcon(icon,
         this.domSanitizer.bypassSecurityTrustResourceUrl("assets/icons/" + icon + ".svg")
       );
