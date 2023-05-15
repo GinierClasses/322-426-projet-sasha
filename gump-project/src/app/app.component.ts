@@ -13,9 +13,8 @@ import {AlertService} from "./services/alert.service";
 export class AppComponent {
 
   title = 'gump-project';
-  svgIcons = ['success', 'error', 'warning', 'info', 'instagram', 'linkedin', 'facebook', 'exchange'];
+  svgIcons = ['success', 'error', 'warning', 'info', 'instagram', 'linkedin', 'facebook', 'exchange', 'paint'];
   toolsSvgIcons = ['tool-circle-selection', 'tool-copy', 'tool-eraser', 'tool-fill-bucket', 'tool-gradient', 'tool-lasso-selection', 'tool-magic-wand', 'tool-move', 'tool-move-selection', 'tool-paintbrush', 'tool-pencil', 'tool-pipette', 'tool-rectangle-selection', 'tool-shapes', 'tool-text'];
-
   constructor(
     public dialog: MatDialog,
     private alertService: AlertService,

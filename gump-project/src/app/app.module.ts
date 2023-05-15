@@ -13,47 +13,57 @@ import {MatButtonModule} from "@angular/material/button";
 import {MatDialogModule} from "@angular/material/dialog";
 import {MatIconModule} from "@angular/material/icon";
 import {HttpClientModule} from "@angular/common/http";
-import { HomeComponent } from './home/home.component';
-import { EditorComponent } from './editor/editor.component';
-import { ToolbarComponent } from './editor/toolbar/toolbar.component';
+import {HomeComponent} from './home/home.component';
+import {EditorComponent} from './editor/editor.component';
+import {TopNavbarComponent} from './editor/top-navbar/top-navbar.component';
+import {MatMenuModule} from "@angular/material/menu";
+import {RightToolBarComponent} from './editor/right-tool-bar/right-tool-bar.component';
+import {MatToolbarModule} from "@angular/material/toolbar";
+import {MatExpansionModule} from "@angular/material/expansion";
+import {NgOptimizedImage} from "@angular/common";
+import {NgxColorsModule} from "ngx-colors";
+import {ToolbarComponent} from './editor/toolbar/toolbar.component';
 import {MatDividerModule} from "@angular/material/divider";
 import {MatTooltipModule} from "@angular/material/tooltip";
-import {NgxColorsModule} from "ngx-colors";
+
+
 
 @NgModule({
-    declarations: [
-      AppComponent,
-      ShareComponent,
-      AlertPopupComponent,
-      HomeComponent,
-      EditorComponent,
-      ToolbarComponent,
-    ],
-    imports: [
-      BrowserModule,
-      AppRoutingModule,
-      BrowserAnimationsModule,
-      MatDialogModule,
-      MatFormFieldModule,
-      MatInputModule,
-      FormsModule,
-      MatButtonModule,
-      MatButtonToggleModule,
-      MatIconModule,
-      HttpClientModule,
-      MatButtonModule,
-      MatDialogModule,
-      MatIconModule,
-      HttpClientModule,
-      MatDividerModule,
-      MatTooltipModule,
-      NgxColorsModule,
-      FormsModule,
-    ],
-    bootstrap: [AppComponent],
-    providers:
-[],
-
+  declarations: [
+    AppComponent,
+    AlertPopupComponent,
+    HomeComponent,
+    EditorComponent,
+    TopNavbarComponent,
+    RightToolBarComponent,
+    AppComponent,
+    ShareComponent,
+    AlertPopupComponent,
+    HomeComponent,
+    EditorComponent,
+    ToolbarComponent,
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatDialogModule,
+    MatIconModule,
+    HttpClientModule,
+    MatMenuModule,
+    MatToolbarModule,
+    MatExpansionModule,
+    NgOptimizedImage,
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule,
+    MatButtonToggleModule,
+    MatDividerModule,
+    MatTooltipModule,
+    NgxColorsModule
+  ],
+  bootstrap: [AppComponent],
 })
 
 export class AppModule {
