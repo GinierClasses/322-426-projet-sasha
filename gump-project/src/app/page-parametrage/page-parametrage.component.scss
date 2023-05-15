@@ -1,0 +1,43 @@
+.preview-content {
+  order: 2;
+  flex-basis: 50%;
+  margin-left: 10px;
+}
+
+.document-preview {
+  width: 100%;
+  height: 300px;
+  background-color: white;
+  border: 1px solid #ccc;
+}
+
+.form-fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Deux colonnes avec largeur égale */
+    grid-gap: 10px; /* Espacement entre les colonnes */
+  }
+  
+  .form-field {
+    display: flex;
+    align-items: center;
+  }
+  
+  .form-field:first-child {
+    grid-column: span 2; /* Le premier champ occupe les deux colonnes */
+  }
+  
+  .buttons {
+    display: flex;
+    gap: 10px; /* Espacement entre les boutons */
+  }
+
+  .empty-fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+}
+
+
+
+
+  
