@@ -1,0 +1,83 @@
+<div class="container">
+
+  <button mat-button [matMenuTriggerFor]="aboveMenu">{{currentMenu}}</button>
+
+  <mat-menu
+    #aboveMenu="matMenu"
+    yPosition="above">
+
+    <button mat-menu-item (click)="showPinceau()">
+
+      <img alt="pinceau" class="image" height="32" ngSrc="assets/icons/paint.svg" width="32">
+
+    </button>
+
+    <button mat-menu-item (click)="showImage()">
+
+      <img alt="image" class="image" height="32" ngSrc="assets/icons/image.svg" width="32">
+
+    </button>
+
+    <button mat-menu-item (click)="showClipboard()">
+
+      <img alt="clipboard" class="image" height="32" ngSrc="assets/icons/historique.svg" width="32">
+
+    </button>
+
+    <button mat-menu-item (click)="showPolice()">
+
+      <img alt="police" class="image" height="32" ngSrc="assets/icons/police.svg" width="32">
+
+    </button>
+
+  </mat-menu>
+
+  <div class="imageContainer" *ngIf="isPinceau">
+
+    <img alt="pinceau" class="image" height="64" ngSrc="assets/icons/paint.svg" width="64">
+    <img alt="pinceau" class="image" height="64" ngSrc="assets/icons/paint.svg" width="64">
+    <img alt="pinceau" class="image" height="64" ngSrc="assets/icons/paint.svg" width="64">
+    <img alt="pinceau" class="image" height="64" ngSrc="assets/icons/paint.svg" width="64">
+    <img alt="pinceau" class="image" height="64" ngSrc="assets/icons/paint.svg" width="64">
+    <img alt="pinceau" class="image" height="64" ngSrc="assets/icons/paint.svg" width="64">
+    <img alt="pinceau" class="image" height="64" ngSrc="assets/icons/paint.svg" width="64">
+
+  </div>
+
+  <div class="imageContainer" *ngIf="isImage">
+
+    <img alt="image" class="image" height="64" ngSrc="assets/icons/image.svg" width="64">
+    <img alt="image" class="image" height="64" ngSrc="assets/icons/image.svg" width="64">
+    <img alt="image" class="image" height="64" ngSrc="assets/icons/image.svg" width="64">
+    <img alt="image" class="image" height="64" ngSrc="assets/icons/image.svg" width="64">
+    <img alt="image" class="image" height="64" ngSrc="assets/icons/image.svg" width="64">
+    <img alt="image" class="image" height="64" ngSrc="assets/icons/image.svg" width="64">
+    <img alt="image" class="image" height="64" ngSrc="assets/icons/image.svg" width="64">
+
+  </div>
+
+  <div class="imageContainer" *ngIf="isClipboard">
+
+    <img alt="clipboard" class="image" height="64" ngSrc="assets/icons/historique.svg" width="64">
+    <img alt="clipboard" class="image" height="64" ngSrc="assets/icons/historique.svg" width="64">
+    <img alt="clipboard" class="image" height="64" ngSrc="assets/icons/historique.svg" width="64">
+    <img alt="clipboard" class="image" height="64" ngSrc="assets/icons/historique.svg" width="64">
+    <img alt="clipboard" class="image" height="64" ngSrc="assets/icons/historique.svg" width="64">
+    <img alt="clipboard" class="image" height="64" ngSrc="assets/icons/historique.svg" width="64">
+    <img alt="clipboard" class="image" height="64" ngSrc="assets/icons/historique.svg" width="64">
+
+  </div>
+
+  <div class="imageContainer" *ngIf="isPolice">
+
+    <img alt="police" class="image" height="64" ngSrc="assets/icons/police.svg" width="64">
+    <img alt="police" class="image" height="64" ngSrc="assets/icons/police.svg" width="64">
+    <img alt="police" class="image" height="64" ngSrc="assets/icons/police.svg" width="64">
+    <img alt="police" class="image" height="64" ngSrc="assets/icons/police.svg" width="64">
+    <img alt="police" class="image" height="64" ngSrc="assets/icons/police.svg" width="64">
+    <img alt="police" class="image" height="64" ngSrc="assets/icons/police.svg" width="64">
+    <img alt="police" class="image" height="64" ngSrc="assets/icons/police.svg" width="64">
+
+  </div>
+
+</div>

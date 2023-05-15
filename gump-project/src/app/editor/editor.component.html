@@ -1,0 +1,21 @@
+<div class="editor-page-wrapper">
+
+  <div class="top-bar">
+    <!-- top bar component -->
+    <app-top-navbar></app-top-navbar>
+  </div>
+
+  <div class="toolbar">
+    <app-toolbar></app-toolbar>
+  </div>
+
+  <div class="image">
+    <!-- image component -->
+  </div>
+
+  <app-right-tool-bar class="menu-sidebar"
+                      [style.background-color]="background"
+                      (newEventEmitter)="ChangeBackground($event)">
+
+  </app-right-tool-bar>
+</div>

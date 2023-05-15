@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.imageContainer {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+mat-menu {
+  vertical-align: top;
+  align-items: center;
+}
+
+.image{
+  padding: 10px;
+  margin: 3px;
+  background: white;
+  border-radius: 10px ;
+}
