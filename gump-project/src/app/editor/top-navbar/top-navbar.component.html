@@ -43,7 +43,9 @@
   </button>
 
   <!-- Bouton qui mène aux paramètres -->
+  <span style="float: right; width: 54px;">
   <button mat-button [ngClass]="{'selected-button': selectedButton === 'Paramètres'}" (click)="clickNoMenuButton('Paramètres'); navigateToParameters()">
     <mat-icon>settings</mat-icon>
   </button>
+    </span>
 </div>

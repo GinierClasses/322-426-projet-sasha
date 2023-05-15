@@ -35,10 +35,6 @@ export class TopNavbarComponent {
     {icon: 'Filter', label: 'Filtres d\'affichage...'},
     {icon: 'colorize', label: 'Gestion des couleurs'},
     {icon: 'grid_on', label: 'Afficher les guides'},
-    {icon: 'grid_on', label: 'Afficher la grille'},
-    {icon: 'import_export', label: 'Afficher les points d\'échantillonnage'},
-    {icon: 'import_export', label: 'Aligner sur la grille'},
-    {icon: 'import_export', label: 'Aligner sur les bords du canevas'},
   ];
   constructor(private router: Router) {}
 
