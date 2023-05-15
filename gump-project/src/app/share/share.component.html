@@ -1,0 +1,55 @@
+<div>
+<h1 class="share-title">Partager</h1>
+</div>
+
+<div class="flex-container">
+  <form class="form">
+    <div class="input-with-title">
+      <h1 class="input-title">Nom du fichier</h1>
+      <mat-form-field appearance="outline" class="full-width">
+        <input matInput [(ngModel)]="selectedFilePath" name="selectedFilePath" class="input-height">
+      </mat-form-field>
+      <div style="width:110px;">
+      <button mat-raised-button color="primary" style="margin-bottom: 25px; height: 53px;" (click)="fileInput.click()">Parcourir</button>
+      </div>
+      <input hidden type="file" #fileInput (change)="onFileSelected($event)">
+      <div style="width: 80px;">
+      <button mat-raised-button color="warn" style="margin-bottom: 25px; height: 53px; width:70px;" (click)="resetImage()">Reset</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<div class="filter">
+  <div class="filter-group">
+    <h3>Filtres disponibles</h3>
+    <mat-button-toggle-group name="favoriteFilter" aria-label="Favorite Filter" (change)="applyFilter($event)">
+      <mat-button-toggle value="rise">Rise</mat-button-toggle>
+      <mat-button-toggle value="mayfair">Mayfair</mat-button-toggle>
+      <mat-button-toggle value="nashville">Nashville</mat-button-toggle>
+      <mat-button-toggle class="red-background" value="no-filter">Reset</mat-button-toggle>
+    </mat-button-toggle-group>
+  </div>
+</div>
+
+<div class="title-visualisation"><h3>Prévisualisation</h3></div>
+<div class="image-preview-container">
+  <img *ngIf="imagePreviewUrl" [src]="imagePreviewUrl" alt="Image preview" [ngClass]="currentFilter">
+</div>
+
+
+<div class="container">
+  <div>
+    <button mat-icon-button class="" (click)="shareLinkedIn()">
+      <mat-icon [svgIcon]="'linkedin'" style="margin-bottom: 0 !important; font-size: 24px; width: 24px;"></mat-icon>
+    </button>
+    <button mat-icon-button class="" (click)="shareInstagram()">
+      <mat-icon [svgIcon]="'instagram'" style="margin-bottom: 0 !important; font-size: 24px; width: 24px;"></mat-icon>
+    </button>
+    <button mat-icon-button class="" (click)="shareFacebook()">
+      <mat-icon [svgIcon]="'facebook'" style="margin-bottom: 0 !important; font-size: 24px; width: 24px;"></mat-icon>
+    </button>
+  </div>
+  <button mat-raised-button color="primary" class="close-button" style="margin-top: 10px;" (click)="onNoClick()">Fermer</button>
+</div>
+
