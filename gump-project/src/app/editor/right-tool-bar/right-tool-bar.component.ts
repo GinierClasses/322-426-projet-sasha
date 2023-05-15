@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component,Output,EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'app-right-tool-bar',
@@ -12,6 +12,11 @@ export class RightToolBarComponent {
   isPolice = false;
   isClipboard = false;
   currentMenu = "pinceau";
+  pinceauBackground="couleur";
+  imageBackground = "couleur";
+  clipboardBackground="couleur";
+  policeBackground="couleur";
+  @Output() newEventEmitter = new EventEmitter<string>();
 
   showImage() {
     this.isPinceau = this.isPinceau ? false : false;
@@ -19,6 +24,7 @@ export class RightToolBarComponent {
     this.isPolice = this.isPolice ? false : false;
     this.isImage = true;
     this.currentMenu = "image";
+    this.newEventEmitter.emit(this.imageBackground);
   }
 
   showClipboard() {
@@ -27,6 +33,7 @@ export class RightToolBarComponent {
     this.isPolice = this.isPolice ? false : false;
     this.isClipboard = true;
     this.currentMenu = "clipboard";
+    this.newEventEmitter.emit(this.clipboardBackground);
   }
 
   showPolice() {
@@ -35,6 +42,7 @@ export class RightToolBarComponent {
     this.isClipboard = this.isClipboard ? false : false;
     this.isPolice = true;
     this.currentMenu = "police";
+    this.newEventEmitter.emit(this.policeBackground);
   }
 
   showPinceau() {
@@ -43,5 +51,6 @@ export class RightToolBarComponent {
     this.isPolice = this.isPolice ? false : false;
     this.isPinceau = true;
     this.currentMenu = "pinceau";
+    this.newEventEmitter.emit(this.pinceauBackground);
   }
 }
