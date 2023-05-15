@@ -5,11 +5,12 @@
     "top-bar top-bar top-bar"
     "toolbar image menu-sidebar";
   width: 100%;
-  min-height: 100vh;
+  height: 100%;
 }
 
 .top-bar {
   grid-area: top-bar;
+  min-height: 5%;
 }
 
 .toolbar {
@@ -22,5 +23,12 @@
 
 .menu-sidebar {
   grid-area: menu-sidebar;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+  max-height: 99%;
+  min-height: 88%;
+  margin-left: 83%;
 }
-

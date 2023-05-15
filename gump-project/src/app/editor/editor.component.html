@@ -13,8 +13,9 @@
     <!-- image component -->
   </div>
 
-  <div class="menu-sidebar">
-    <!-- menu sidebar component -->
-  </div>
+  <app-right-tool-bar class="menu-sidebar"
+                      [style.background-color]="background"
+                      (newEventEmitter)="ChangeBackground($event)">
 
+  </app-right-tool-bar>
 </div>
