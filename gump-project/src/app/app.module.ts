@@ -15,7 +15,6 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {NgxColorsModule} from 'ngx-colors';
 import {ShareComponent} from './share/share.component';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
-import {AlertPopupComponent} from './commons/alert-popup/alert-popup.component';
 import {HttpClientModule} from "@angular/common/http";
 import {HomeComponent} from './home/home.component';
 import {EditorComponent} from './editor/editor.component';
@@ -34,7 +33,6 @@ import {MatTooltipModule} from "@angular/material/tooltip";
   declarations: [
     AppComponent,
     PageParametrageComponent,
-    AlertPopupComponent,
     HomeComponent,
     EditorComponent,
     TopNavbarComponent,

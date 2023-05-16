@@ -1,6 +1,5 @@
 import {Injectable} from '@angular/core';
 import {Shortcut} from "../types/shortcut";
-import {CookieService} from "ngx-cookie-service";
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +14,6 @@ export class ShortcutsService {
   ];
 
   constructor(
-    private cookies: CookieService
   ) {
   }
 
@@ -24,16 +22,7 @@ export class ShortcutsService {
    * @return {Shortcut[]} the shortcuts array
    */
   getShortcuts(): Shortcut[] {
-    return this.cookies.get('shortcuts') ? JSON.parse(this.cookies.get('shortcuts')) : this.shortcuts;
-  }
-
-  /**
-   * Set the shortcuts array
-   * @param shortcuts the shortcuts array
-   */
-  setShortcuts(shortcuts: Shortcut[]) {
-    this.shortcuts = shortcuts;
-    this.cookies.set('shortcuts', JSON.stringify(this.shortcuts));
+    return this.shortcuts;
   }
 
 }

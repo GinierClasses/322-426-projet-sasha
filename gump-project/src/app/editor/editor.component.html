@@ -13,9 +13,11 @@
     <!-- image component -->
   </div>
 
-  <app-right-tool-bar class="menu-sidebar"
-                      [style.background-color]="background"
-                      (newEventEmitter)="ChangeBackground($event)">
+  <div class="menu-sidebar">
+    <app-right-tool-bar class="menu-sidebar-component"
+                        [style.background-color]="background"
+                        (newEventEmitter)="ChangeBackground($event)">
+    </app-right-tool-bar>
+  </div>
 
-  </app-right-tool-bar>
 </div>

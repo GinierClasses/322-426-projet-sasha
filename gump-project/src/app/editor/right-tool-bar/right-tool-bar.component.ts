@@ -12,10 +12,10 @@ export class RightToolBarComponent {
   isPolice = false;
   isClipboard = false;
   currentMenu = "pinceau";
-  pinceauBackground="couleur";
-  imageBackground = "couleur";
-  clipboardBackground="couleur";
-  policeBackground="couleur";
+  pinceauBackground="#ff7373";
+  imageBackground = "#f6f6a9";
+  clipboardBackground="#87ff91";
+  policeBackground="#8383f8";
   @Output() newEventEmitter = new EventEmitter<string>();
 
   showImage() {
@@ -53,4 +53,20 @@ export class RightToolBarComponent {
     this.currentMenu = "pinceau";
     this.newEventEmitter.emit(this.pinceauBackground);
   }
+
+  getCurrentMenuDisplayName(): string {
+    switch (this.currentMenu) {
+      case "pinceau":
+        return "Pinceaux";
+      case "image":
+        return "Calques";
+      case "clipboard":
+        return "Clipboard";
+      case "police":
+        return "Polices";
+      default:
+        return "";
+    }
+  }
+
 }

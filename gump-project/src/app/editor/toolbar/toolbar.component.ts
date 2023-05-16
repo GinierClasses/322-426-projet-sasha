@@ -69,7 +69,6 @@ export class ToolbarComponent implements OnInit {
     this.tools.forEach(tool => {
       tool.selected = tool.id === toolToSelect.id;
     });
-    this.toolService.setTools(this.tools);
   }
 
   getToolButtonColor(tool: Tool): ThemePalette {

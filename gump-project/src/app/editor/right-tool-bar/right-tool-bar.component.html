@@ -1,6 +1,6 @@
 <div class="container">
 
-  <button mat-button [matMenuTriggerFor]="aboveMenu">{{currentMenu}}</button>
+  <button mat-button [matMenuTriggerFor]="aboveMenu">{{getCurrentMenuDisplayName()}}</button>
 
   <mat-menu
     #aboveMenu="matMenu"
@@ -8,25 +8,29 @@
 
     <button mat-menu-item (click)="showPinceau()">
 
-      <img alt="pinceau" class="image" height="32" ngSrc="assets/icons/paint.svg" width="32">
+      <mat-icon [svgIcon]="'paint'" style="width: 16px"></mat-icon>
+      <span>Pinceaux</span>
 
     </button>
 
     <button mat-menu-item (click)="showImage()">
 
-      <img alt="image" class="image" height="32" ngSrc="assets/icons/image.svg" width="32">
+      <mat-icon [svgIcon]="'image'" style="width: 16px"></mat-icon>
+      <span>Calques</span>
 
     </button>
 
     <button mat-menu-item (click)="showClipboard()">
 
-      <img alt="clipboard" class="image" height="32" ngSrc="assets/icons/historique.svg" width="32">
+      <mat-icon [svgIcon]="'historique'" style="width: 16px"></mat-icon>
+      <span>Clipboard</span>
 
     </button>
 
     <button mat-menu-item (click)="showPolice()">
 
-      <img alt="police" class="image" height="32" ngSrc="assets/icons/police.svg" width="32">
+      <mat-icon [svgIcon]="'police'" style="width: 16px"></mat-icon>
+      <span>Polices</span>
 
     </button>
 

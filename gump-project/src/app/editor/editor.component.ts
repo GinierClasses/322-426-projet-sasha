@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class EditorComponent {
 
-  background = "couleur"
+  background = "#ff7373"
 
   ChangeBackground(event: string) {
     this.background=event;

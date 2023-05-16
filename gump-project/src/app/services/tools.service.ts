@@ -1,6 +1,5 @@
 import {Injectable} from '@angular/core';
 import {Tool} from "../types/tool";
-import {CookieService} from "ngx-cookie-service";
 
 @Injectable({
   providedIn: 'root'
@@ -26,7 +25,6 @@ export class ToolsService {
   ];
 
   constructor(
-    private cookies: CookieService
   ) {
   }
 
@@ -35,16 +33,7 @@ export class ToolsService {
    * @return {Tool[]} the tools array
    */
   getTools(): Tool[] {
-    return this.cookies.get('tools') ? JSON.parse(this.cookies.get('tools')) : this.tools;
-  }
-
-  /**
-   * Set the tools array
-   * @param tools the tools array
-   */
-  setTools(tools: Tool[]) {
-    this.tools = tools;
-    this.cookies.set('tools', JSON.stringify(this.tools));
+    return this.tools;
   }
 
 }
