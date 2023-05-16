@@ -1,8 +1,6 @@
-import { Component } from '@angular/core';
-import { MatDialogRef } from '@angular/material/dialog';
-import { MatButtonToggleChange } from '@angular/material/button-toggle';
-import { MatIconModule } from '@angular/material/icon';
-import { NgModule } from '@angular/core';
+import {Component} from '@angular/core';
+import {MatDialogRef} from '@angular/material/dialog';
+import {MatButtonToggleChange} from '@angular/material/button-toggle';
 
 export interface ImageFilter {
   name: string;
@@ -20,8 +18,13 @@ export class ShareComponent {
   imagePreviewUrl!: string;
   currentFilter = 'no-filter';
   imageAspectRatio = 0;
-  filters: ImageFilter[] = [{name: 'Rise', className: 'rise'}, {name: 'Mayfair', className: 'mayfair'}, {name: 'Nashville', className: 'nashville'}];
-  constructor(public dialogRef: MatDialogRef<ShareComponent>) {}
+  filters: ImageFilter[] = [{name: 'Rise', className: 'rise'}, {
+    name: 'Mayfair',
+    className: 'mayfair'
+  }, {name: 'Nashville', className: 'nashville'}];
+
+  constructor(public dialogRef: MatDialogRef<ShareComponent>) {
+  }
 
   onNoClick(): void {
     this.dialogRef.close();
@@ -37,6 +40,7 @@ export class ShareComponent {
       'https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fexample.com%2F';
     window.open(url, '_blank');
   }
+
   shareLinkedIn(): void {
     const url =
       'https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fexample.com%2F';
@@ -88,14 +92,3 @@ export class ShareComponent {
     });
   }
 }
-
-@NgModule({
-  imports: [
-    MatIconModule
-  ],
-  exports: [
-    MatIconModule
-  ]
-})
-
-export class ShareModule {}

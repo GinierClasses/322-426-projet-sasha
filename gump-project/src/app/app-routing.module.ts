@@ -5,12 +5,8 @@ import {EditorComponent} from "./editor/editor.component";
 
 const routes: Routes = [
   {
-    path: 'new',
-    component: HomeComponent
-  },
-  {
     path: 'open',
-    component: HomeComponent
+    redirectTo: 'editor'
   },
   {
     path: '',
@@ -18,10 +14,6 @@ const routes: Routes = [
   },
   {
     path: 'formation',
-    component: HomeComponent
-  },
-  {
-    path: 'share',
     component: HomeComponent
   },
   {
@@ -38,7 +30,7 @@ const routes: Routes = [
   },
   {
     path: '**',
-    component: HomeComponent
+    redirectTo: ''
   }
 ];
 
@@ -46,4 +38,6 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+
+}

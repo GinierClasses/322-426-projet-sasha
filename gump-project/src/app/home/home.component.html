@@ -10,12 +10,12 @@
   <ul>
     <li>
       <a>
-        <div class="nav-button" style="background: #72a3f9" routerLink="/nouveauFichier">Nouveau fichier</div>
+        <div class="nav-button" style="background: #72a3f9" (click)="openSettingsWindow()">Nouveau fichier</div>
       </a>
     </li>
     <li>
       <a>
-        <div class="nav-button" [ngClass]="{'nav-button-active': isCurrentRoute('/ouvrir')}" routerLink="/ouvrir">Ouvrir</div>
+        <div class="nav-button" [ngClass]="{'nav-button-active': isCurrentRoute('/open')}" routerLink="/open">Ouvrir</div>
       </a>
     </li>
     <li>
@@ -40,17 +40,17 @@
     </li>
     <li>
       <a>
-        <div class="nav-button" [ngClass]="{'nav-button-active': isCurrentRoute('/partager')}" routerLink="/partager">Partager</div>
+        <div class="nav-button" (click)="openShareWindow()">Partager</div>
       </a>
     </li>
     <li>
       <a>
-        <div class="nav-button" [ngClass]="{'nav-button-active': isCurrentRoute('/vosFichiers')}" routerLink="/vosFichiers">Vos Fichiers</div>
+        <div class="nav-button" [ngClass]="{'nav-button-active': isCurrentRoute('/files')}" routerLink="/files">Vos Fichiers</div>
       </a>
     </li>
     <li>
       <a>
-        <div class="nav-button" [ngClass]="{'nav-button-active': isCurrentRoute('/supprimes')}" routerLink="/supprimes">Supprimés</div>
+        <div class="nav-button" [ngClass]="{'nav-button-active': isCurrentRoute('/deleted')}" routerLink="/deleted">Supprimés</div>
       </a>
     </li>
   </ul>

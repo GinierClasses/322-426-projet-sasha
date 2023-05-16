@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
 import {ShareComponent} from "../share/share.component";
 import {MatDialog} from "@angular/material/dialog";
+import {PageParametrageComponent} from "../page-parametrage/page-parametrage.component";
 
 @Component({
   selector: 'app-home',
@@ -10,16 +11,14 @@ import {MatDialog} from "@angular/material/dialog";
 })
 export class HomeComponent implements OnInit {
 
-  isNouveauFichier = false;
-  isOuvrir = false;
   isContent = false;
   isFormation = false;
-  isPartager = false;
   isVosFichiers = false;
   isSupprimes = false;
 
   constructor(
-    private router: Router
+    private router: Router,
+    private dialog: MatDialog
   ) {
 
   }
@@ -27,20 +26,11 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     const currentRoute = this.router.url;
     if (currentRoute) {
-      if (currentRoute == '/new') {
-        this.isNouveauFichier = true;
-      }
-      if (currentRoute == '/open') {
-        this.isOuvrir = true;
-      }
       if (currentRoute == '/') {
         this.isContent = true;
       }
       if (currentRoute == '/formation') {
         this.isFormation = true;
-      }
-      if (currentRoute == '/share') {
-        this.isPartager = true;
       }
       if (currentRoute == '/files') {
         this.isVosFichiers = true;
@@ -55,21 +45,32 @@ export class HomeComponent implements OnInit {
     return route == this.router.url;
   }
 
-  constructor(
-    private dialog: MatDialog
-  ) {
-  }
-
   openShareWindow(): void {
+
     const dialogRef = this.dialog.open(ShareComponent, {
       width: '100%',
       height: '95%',
-      maxHeight: '100%'
     });
 
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed : ' + result);
+      this.router.navigate(['/']);
     });
+  }
+
+  openSettingsWindow(): void {
+
+    const dialogRef = this.dialog.open(PageParametrageComponent, {
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        this.router.navigate(['/editor'])
+      } else {
+        this.router.navigate(['/'])
+      }
+    });
+
   }
 
 }

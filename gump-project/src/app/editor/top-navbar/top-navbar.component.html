@@ -9,7 +9,7 @@
     <mat-icon>folder</mat-icon> Fichier
   </button>
   <mat-menu #folderMenu="matMenu">
-    <button mat-menu-item *ngFor="let item of folderMenuItems" [ngStyle]="{'margin-left': !item.icon ? '24px' : '0'}">
+    <button mat-menu-item *ngFor="let item of folderMenuItems" [ngStyle]="{'margin-left': !item.icon ? '24px' : '0'}" [routerLink]="item.path ? item.path : '/editor'" (click)="itemClick(item)">
       <mat-icon *ngIf="item.icon">{{item.icon}}</mat-icon>
       {{item.label}}
     </button>
@@ -37,6 +37,10 @@
     </button>
   </mat-menu>
 
+  <button mat-button [ngClass]="{'selected-button': selectedButton === 'Partage'}" (click)="clickNoMenuButton('Partage'); openShareWindow()">
+    <mat-icon>share</mat-icon> Partager
+  </button>
+
   <!-- Bouton qui mène aux tutoriels -->
   <button mat-button [ngClass]="{'selected-button': selectedButton === 'Aide'}" (click)="clickNoMenuButton('Aide'); navigateToTutorial()">
     <mat-icon>help</mat-icon> Aide
@@ -44,7 +48,7 @@
 
   <!-- Bouton qui mène aux paramètres -->
   <span style="float: right; width: 54px;">
-  <button mat-button [ngClass]="{'selected-button': selectedButton === 'Paramètres'}" (click)="clickNoMenuButton('Paramètres'); navigateToParameters()">
+  <button mat-button [ngClass]="{'selected-button': selectedButton === 'Paramètres'}" (click)="clickNoMenuButton('Paramètres'); openSettingsWindow()">
     <mat-icon>settings</mat-icon>
   </button>
     </span>

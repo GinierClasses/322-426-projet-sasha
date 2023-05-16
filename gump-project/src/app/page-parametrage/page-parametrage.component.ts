@@ -1,28 +1,24 @@
-import { Component, Inject } from '@angular/core';
-import { MatDialogRef } from '@angular/material/dialog';
+import {Component} from '@angular/core';
+import {MatDialogRef} from '@angular/material/dialog';
 
 @Component({
-selector: 'app-page-parametrage',
-templateUrl: './page-parametrage.component.html',
-styleUrls: ['./page-parametrage.component.scss']
+  selector: 'app-page-parametrage',
+  templateUrl: './page-parametrage.component.html',
+  styleUrls: ['./page-parametrage.component.scss']
 })
 export class PageParametrageComponent {
-isPortraitSelected: boolean = false;
-isLandscapeSelected: boolean = false;
-firstColor: string = ''; // Ajout de la propriété firstColor
+  isPortraitSelected: boolean = false;
+  isLandscapeSelected: boolean = false;
+  backgroundColor: string = '';
 
-constructor(public dialogRef: MatDialogRef<PageParametrageComponent>) {}
+  constructor(public dialogRef: MatDialogRef<PageParametrageComponent>) {
+  }
 
-saveColors() {
-// Logique pour sauvegarder les couleurs
-}
+  openDialog() {
+    this.dialogRef.close(true)
+  }
 
-openDialog() {
-// Logique pour ouvrir le document
-// ...
-}
-
-closeDialog() {
-this.dialogRef.close();
-}
+  closeDialog() {
+    this.dialogRef.close(false);
+  }
 }

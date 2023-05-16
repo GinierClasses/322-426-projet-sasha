@@ -1,5 +1,8 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {Router} from "@angular/router";
+import {ShareComponent} from "../../share/share.component";
+import {PageParametrageComponent} from "../../page-parametrage/page-parametrage.component";
+import {MatDialog} from "@angular/material/dialog";
 
 @Component({
   selector: 'app-top-navbar',
@@ -7,9 +10,9 @@ import {Router} from "@angular/router";
   styleUrls: ['./top-navbar.component.scss']
 })
 export class TopNavbarComponent {
-  folderMenuItems = [{icon: 'add_a_photo', label: 'Nouvelle image'},
+  folderMenuItems = [{icon: 'add_a_photo', label: 'Nouvelle image', click: 'settings'},
     {icon: 'insert_drive_file', label: 'Ouvrir...'},
-    {icon: 'access_time', label: 'Récemment ouvert'},
+    {icon: 'access_time', label: 'Récemment ouvert', path: '/files'},
     {icon: 'save', label: 'Enregistrer'},
     {icon: 'save_alt', label: 'Enregistrer sous...'},
     {icon: 'history', label: 'Rétablir'},
@@ -36,7 +39,11 @@ export class TopNavbarComponent {
     {icon: 'colorize', label: 'Gestion des couleurs'},
     {icon: 'grid_on', label: 'Afficher les guides'},
   ];
-  constructor(private router: Router) {}
+
+  selectedButton: string | null = null;
+
+  constructor(private router: Router, private dialog: MatDialog) {
+  }
 
   navigateToHome() {
     this.router.navigateByUrl('/home')
@@ -49,26 +56,8 @@ export class TopNavbarComponent {
   }
 
   navigateToTutorial() {
-    this.router.navigateByUrl('/tutorial')
-      .then(() => {
-        console.log('Page tutoriel trouvée');
-      })
-      .catch((error) => {
-        console.error('Page tutoriel non trouvée', error);
-      });
+    this.router.navigate(['formation']);
   }
-
-  navigateToParameters() {
-    this.router.navigateByUrl('/parameters')
-      .then(() => {
-        console.log('Page de paramètres trouvée');
-      })
-      .catch((error) => {
-        console.error('Page de paramètres non trouvée', error);
-      });
-  }
-
-  selectedButton: string | null = null;
 
   selectButton(buttonName: string) {
     this.selectedButton = buttonName;
@@ -88,4 +77,33 @@ export class TopNavbarComponent {
       this.selectedButton = null;
     }, 100);
   }
+
+  openShareWindow(): void {
+
+    const dialogRef = this.dialog.open(ShareComponent, {
+      width: '100%',
+      height: '95%',
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+    });
+  }
+
+  openSettingsWindow(): void {
+
+    const dialogRef = this.dialog.open(PageParametrageComponent, {});
+
+    dialogRef.afterClosed().subscribe(result => {
+    });
+
+  }
+
+  itemClick(item: any) {
+    if (item.click && item.click == 'settings') {
+      this.openSettingsWindow();
+    }
+  }
+
+  protected readonly console = console;
 }
+
