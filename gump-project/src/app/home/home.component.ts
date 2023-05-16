@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {Router} from "@angular/router";
 import {ShareComponent} from "../share/share.component";
 import {MatDialog} from "@angular/material/dialog";
 
@@ -7,13 +8,57 @@ import {MatDialog} from "@angular/material/dialog";
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
+
+  isNouveauFichier = false;
+  isOuvrir = false;
+  isContent = false;
+  isFormation = false;
+  isPartager = false;
+  isVosFichiers = false;
+  isSupprimes = false;
+
+  constructor(
+    private router: Router
+  ) {
+
+  }
+
+  ngOnInit() {
+    const currentRoute = this.router.url;
+    if (currentRoute) {
+      if (currentRoute == '/new') {
+        this.isNouveauFichier = true;
+      }
+      if (currentRoute == '/open') {
+        this.isOuvrir = true;
+      }
+      if (currentRoute == '/') {
+        this.isContent = true;
+      }
+      if (currentRoute == '/formation') {
+        this.isFormation = true;
+      }
+      if (currentRoute == '/share') {
+        this.isPartager = true;
+      }
+      if (currentRoute == '/files') {
+        this.isVosFichiers = true;
+      }
+      if (currentRoute == '/deleted') {
+        this.isSupprimes = true;
+      }
+    }
+  }
+
+  isCurrentRoute(route: string) {
+    return route == this.router.url;
+  }
 
   constructor(
     private dialog: MatDialog
   ) {
   }
-
 
   openShareWindow(): void {
     const dialogRef = this.dialog.open(ShareComponent, {

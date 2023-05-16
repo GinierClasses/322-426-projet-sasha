@@ -1,0 +1,84 @@
+.mat-toolbar{
+  font: 500 45px Roboto, sans-serif;
+}
+
+.page-sidebar {
+  min-height: 100%;
+  float: left;
+  position: relative;
+  z-index: 3;
+  overflow: auto;
+  width: 180px;
+  border-right: 1px solid black; // BLack bar on right
+  ul {
+    display: block;
+    list-style: none;
+
+    li {
+      a {
+        display: block;
+        padding: 10px 10px;
+
+        i {
+          font-size: 24px;
+          float: left;
+          margin-right: 15px;
+          line-height: 30px;
+          width: 30px;
+          text-align: center;
+        }
+
+        div {
+          line-height: 40px;
+          position: relative;
+          height: auto;
+          width: 160px;
+        }
+      }
+    }
+  }
+}
+
+.nav-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  min-width: 64px;
+  border: none;
+  outline: none;
+  line-height: inherit;
+  user-select: none;
+  -webkit-appearance: none;
+  overflow: visible;
+  vertical-align: middle;
+  background: rgba(0,0,0,0);
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: var(--mdc-typography-button-font-family,var(--mdc-typography-font-family, Roboto,));
+  font-size: var(--mdc-typography-button-font-size, 14px);
+  font-weight: var(--mdc-typography-button-font-weight, 500);
+  letter-spacing: var(--mdc-typography-button-letter-spacing, 0.0892857143em);
+  text-decoration: var(--mdc-typography-button-text-decoration, none);
+  text-transform: var(--mdc-typography-button-text-transform, none);
+  transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 0 16px 0 16px;
+  height: var(--mdc-protected-button-container-height, 36px);
+  border-radius: var(--mdc-protected-button-container-shape, var(--mdc-shape-small, 4px));
+  box-shadow: var(--mdc-protected-button-container-elevation, 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12));
+}
+
+.nav-button-active {
+  background: #d4e4fd;
+}
+
+.nav-button:hover {
+  cursor: pointer;
+  box-shadow: 0px 2px 4px -1px rgba(0 0 0 /0.2), 0px 4px 5px 0px rgba(0 0 0 / 0.14), 0px 1px 10px 0px rgba(0 0 0 / 0.12);
+  color: inherit;
+  background: rgba(0,0,0,0.1);
+}
+.nav-button-active:hover {
+  background: rgba(212,228,253,0.9);
+}

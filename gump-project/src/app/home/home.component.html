@@ -1,3 +1,61 @@
-<p>home works!</p>
-<button>test</button>
-<button (click)="openShareWindow()">Partager</button>
+<div>
+  <p style="margin: 0px">
+    <mat-toolbar color="primary">
+      <!-- <mat-toolbar color="primary">-->
+      <span>Gump</span>
+    </mat-toolbar>
+</p>
+</div>
+<div class="page-sidebar">
+  <ul>
+    <li>
+      <a>
+        <div class="nav-button" style="background: #72a3f9" routerLink="/nouveauFichier">Nouveau fichier</div>
+      </a>
+    </li>
+    <li>
+      <a>
+        <div class="nav-button" [ngClass]="{'nav-button-active': isCurrentRoute('/ouvrir')}" routerLink="/ouvrir">Ouvrir</div>
+      </a>
+    </li>
+    <li>
+      <a>
+        <mat-divider style="border-top-color: black"></mat-divider>
+      </a>
+    </li>
+    <li>
+      <a>
+        <div class="nav-button" [ngClass]="{'nav-button-active': isCurrentRoute('/')}" routerLink="/">Acceuil</div>
+      </a>
+    </li>
+    <li>
+      <a>
+        <div class="nav-button" [ngClass]="{'nav-button-active': isCurrentRoute('/formation')}" routerLink="/formation">Formation</div>
+      </a>
+    </li>
+    <li>
+      <a>
+        <h3>FICHIERS</h3>
+      </a>
+    </li>
+    <li>
+      <a>
+        <div class="nav-button" [ngClass]="{'nav-button-active': isCurrentRoute('/partager')}" routerLink="/partager">Partager</div>
+      </a>
+    </li>
+    <li>
+      <a>
+        <div class="nav-button" [ngClass]="{'nav-button-active': isCurrentRoute('/vosFichiers')}" routerLink="/vosFichiers">Vos Fichiers</div>
+      </a>
+    </li>
+    <li>
+      <a>
+        <div class="nav-button" [ngClass]="{'nav-button-active': isCurrentRoute('/supprimes')}" routerLink="/supprimes">Supprimés</div>
+      </a>
+    </li>
+  </ul>
+</div>
+<app-home-content *ngIf="isContent"></app-home-content>
+<app-home-formation *ngIf="isFormation"></app-home-formation>
+<app-home-supprimes *ngIf="isSupprimes"></app-home-supprimes>
+<app-home-vos-fichiers *ngIf="isVosFichiers"></app-home-vos-fichiers>
