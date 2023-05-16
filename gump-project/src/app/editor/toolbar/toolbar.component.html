@@ -1,0 +1,28 @@
+<div class="elevated-toolbar">
+
+  <!-- Tools -->
+  <button mat-button
+          *ngFor="let tool of tools"
+          (click)="selectTool(tool)"
+          [matTooltip]="tool.name + ' | ' + tool.shortcut"
+          matTooltipShowDelay="1000"
+          [color]="getToolButtonColor(tool)"
+  >
+    <mat-icon [svgIcon]="tool.icon"></mat-icon>
+  </button>
+
+  <!-- Divider -->
+  <mat-divider></mat-divider>
+
+  <!-- Colors -->
+  <button mat-button ngx-colors-trigger [(ngModel)]="firstColor" (ngModelChange)="saveColors()">
+    <div class="selected-color-button" [ngStyle]="{'background': firstColor}"></div>
+  </button>
+  <button mat-button (click)="swapColors()" [matTooltip]="getColorSwapTooltip()" matTooltipShowDelay="1000">
+    <mat-icon [svgIcon]="'exchange'" class="exchange-icon"></mat-icon>
+  </button>
+  <button mat-button ngx-colors-trigger [(ngModel)]="secondColor">
+    <div class="selected-color-button" [ngStyle]="{'background': secondColor}"></div>
+  </button>
+
+</div>

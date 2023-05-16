@@ -1,14 +1,15 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {HomeComponent} from "./home/home.component";
+import {EditorComponent} from "./editor/editor.component";
 
 const routes: Routes = [
   {
-    path: 'nouveauFichier',
+    path: 'new',
     component: HomeComponent
   },
   {
-    path: 'ouvrir',
+    path: 'open',
     component: HomeComponent
   },
   {
@@ -20,15 +21,23 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: 'partager',
+    path: 'share',
     component: HomeComponent
   },
   {
-    path: 'vosFichiers',
+    path: 'files',
     component: HomeComponent
   },
   {
-    path: 'supprimes',
+    path: 'deleted',
+    component: HomeComponent
+  },
+  {
+    path: 'editor',
+    component: EditorComponent,
+  },
+  {
+    path: '**',
     component: HomeComponent
   }
 ];

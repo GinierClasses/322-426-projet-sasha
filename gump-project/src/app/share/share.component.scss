@@ -1,0 +1,147 @@
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+.csvg svg{
+  width:50px;
+  height:50px;
+}
+.mat-mdc-icon-button svg, .mat-mdc-icon-button img {
+  width: 24px!important;
+  height: 24px!important;
+}
+// Title of the page
+.share-title {
+  font-size: 2rem;
+  color: #333;
+  align-items: center;
+  display:grid;
+  height: 100%;
+  margin:30px;
+}
+
+// Zone for search file with a Windows Explorer
+.form {
+  min-width: 100px;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.input-with-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.input-title {
+  margin-bottom: 25px;
+  max-width: 170px;
+  width: 100%;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+// Share buttons
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: absolute;
+  right: 1rem;
+  gap: 0.5rem;
+  margin-top: 50px;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  width: 15rem;
+}
+
+.my-icon {
+  height: 24px;
+  width: 24px;
+}
+
+.close-button {
+  margin-top: 20px;
+}
+
+// Preview
+.image-preview-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  margin: 0 auto;
+}
+
+// Filters section
+.filter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 110px;
+  width: 100%;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+}
+
+h3 {
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+.title-visualisation {
+  justify-content: center;
+  display: flex;
+  margin-top: 10px;
+}
+
+mat-button-toggle {
+  font-size: 20px;
+}
+
+.red-background {
+  background-color: red;
+  color: white;
+}
+
+// Filter
+.no-filter {
+  filter: none;
+}
+
+.rise {
+  filter: contrast(0.9) brightness(1.1) sepia(0.2) saturate(1.1);
+}
+
+.mayfair {
+  filter: brightness(1.1) saturate(1.1) contrast(0.9) hue-rotate(-5deg);
+}
+
+.nashville {
+  filter: sepia(0.2) contrast(1.2) brightness(1.1) saturate(1.3) hue-rotate(-15deg);
+}
+
+
+.input-height {
+  height: 40px;
+}

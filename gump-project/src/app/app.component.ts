@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
-import {AlertService} from "./services/alert.service";
-import {MatIconRegistry} from "@angular/material/icon";
-import {DomSanitizer} from "@angular/platform-browser";
+import {MatDialog} from '@angular/material/dialog';
+import {MatIconRegistry} from '@angular/material/icon';
+import {DomSanitizer} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
@@ -9,22 +9,25 @@ import {DomSanitizer} from "@angular/platform-browser";
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
   title = 'gump-project';
-  svgIcons = ['success', 'error', 'warning', 'info'];
+  svgIcons = ['success', 'error', 'warning', 'info', 'instagram', 'linkedin', 'facebook', 'exchange', 'paint', 'image', 'historique', 'police'];
+  toolsSvgIcons = ['tool-circle-selection', 'tool-copy', 'tool-eraser', 'tool-fill-bucket', 'tool-gradient', 'tool-lasso-selection', 'tool-magic-wand', 'tool-move', 'tool-move-selection', 'tool-paintbrush', 'tool-pencil', 'tool-pipette', 'tool-rectangle-selection', 'tool-shapes', 'tool-text'];
   constructor(
-    private alertService: AlertService,
+    public dialog: MatDialog,
     private matIconRegistry: MatIconRegistry,
     private domSanitizer: DomSanitizer,
   ) {
     for (const icon of this.svgIcons) {
-      this.matIconRegistry.addSvgIcon(icon,
-        this.domSanitizer.bypassSecurityTrustResourceUrl("assets/icons/" + icon + ".svg")
-      );
+      let icons: string[] = [];
+      icons.push(...this.svgIcons);
+      icons.push(...this.toolsSvgIcons);
+      for (let icon of icons) {
+        this.matIconRegistry.addSvgIcon(icon,
+          this.domSanitizer.bypassSecurityTrustResourceUrl("assets/icons/" + icon + ".svg")
+        );
+      }
     }
-  }
-
-  test() {
-    this.alertService.alert('test', 'test', 'info');
   }
 
 }
