@@ -1,0 +1,6 @@
+<div class="image-container">
+  <img [src]="imageUrl" [style.width.%]="imageSize" alt="Image" style="max-height: 90vh;" />
+</div>
+<mat-slider min="1" max="100" class="slider" discrete>
+  <input matSliderThumb [(ngModel)]="imageSize">
+</mat-slider>

@@ -20,6 +20,16 @@
 
 .image {
   grid-area: image;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .image-template {
+    max-width: 80%;
+    margin-bottom: 90px;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+  }
 }
 
 .menu-sidebar {
@@ -30,9 +40,7 @@
 }
 
 .menu-sidebar-component {
-  min-height: 80vh;
-  max-height: 90vh;
-  max-width: 20%;
+  max-height: 80vh;
   min-width: 70px;
   border-radius: 10px 0 0 10px;
   padding-block: 10px;

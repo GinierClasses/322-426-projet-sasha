@@ -34,6 +34,8 @@ import {MatExpansionModule} from "@angular/material/expansion";
 import {NgOptimizedImage} from "@angular/common";
 import {ToolbarComponent} from './editor/toolbar/toolbar.component';
 import {MatTooltipModule} from "@angular/material/tooltip";
+import {MatSliderModule} from "@angular/material/slider";
+import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 
 @NgModule({
   declarations: [
@@ -74,6 +76,8 @@ import {MatTooltipModule} from "@angular/material/tooltip";
     NgOptimizedImage,
     MatButtonToggleModule,
     MatTooltipModule,
+    MatSliderModule,
+    MatProgressSpinnerModule,
   ],
   bootstrap: [AppComponent],
 })
