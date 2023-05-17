@@ -1,0 +1,55 @@
+<div class="top-navbar">
+  <!-- Bouton qui mène à l'accueil -->
+  <button mat-button [ngClass]="{'selected-button': selectedButton === 'Accueil'}" (click)="clickNoMenuButton('Accueil'); navigateToHome()">
+    <mat-icon>home</mat-icon> Accueil
+  </button>
+
+  <!-- Menu fichier -->
+  <button mat-button [matMenuTriggerFor]="folderMenu" [ngClass]="{'selected-button': selectedButton === 'Fichier'}" (click)="selectButton('Fichier')" (menuOpened)="menuOpened('Fichier')" (menuClosed)="menuClosed()">
+    <mat-icon>folder</mat-icon> Fichier
+  </button>
+  <mat-menu #folderMenu="matMenu">
+    <button mat-menu-item *ngFor="let item of folderMenuItems" [ngStyle]="{'margin-left': !item.icon ? '24px' : '0'}" [routerLink]="item.path ? item.path : '/editor'" (click)="itemClick(item)">
+      <mat-icon *ngIf="item.icon">{{item.icon}}</mat-icon>
+      {{item.label}}
+    </button>
+  </mat-menu>
+
+  <!-- Menu édition -->
+  <button mat-button [matMenuTriggerFor]="editionMenu" [ngClass]="{'selected-button': selectedButton === 'Edition'}" (click)="selectButton('Edition')" (menuOpened)="menuOpened('Edition')" (menuClosed)="menuClosed()">
+    <mat-icon>edit</mat-icon> Edition
+  </button>
+  <mat-menu #editionMenu="matMenu">
+    <button mat-menu-item *ngFor="let item of editionMenuItems" [ngStyle]="{'margin-left': !item.icon ? '24px' : '0'}">
+      <mat-icon *ngIf="item.icon">{{item.icon}}</mat-icon>
+      {{item.label}}
+    </button>
+  </mat-menu>
+
+  <!-- Menu affichage -->
+  <button mat-button [matMenuTriggerFor]="viewMenu" [ngClass]="{'selected-button': selectedButton === 'Affichage'}" (click)="selectButton('Affichage')" (menuOpened)="menuOpened('Affichage')" (menuClosed)="menuClosed()">
+    <mat-icon>visibility</mat-icon> Affichage
+  </button>
+  <mat-menu #viewMenu="matMenu">
+    <button mat-menu-item *ngFor="let item of viewMenuItems" [ngStyle]="{'margin-left': !item.icon ? '24px' : '0'}">
+      <mat-icon *ngIf="item.icon">{{item.icon}}</mat-icon>
+      {{item.label}}
+    </button>
+  </mat-menu>
+
+  <button mat-button [ngClass]="{'selected-button': selectedButton === 'Partage'}" (click)="clickNoMenuButton('Partage'); openShareWindow()">
+    <mat-icon>share</mat-icon> Partager
+  </button>
+
+  <!-- Bouton qui mène aux tutoriels -->
+  <button mat-button [ngClass]="{'selected-button': selectedButton === 'Aide'}" (click)="clickNoMenuButton('Aide'); navigateToTutorial()">
+    <mat-icon>help</mat-icon> Aide
+  </button>
+
+  <!-- Bouton qui mène aux paramètres -->
+  <span style="float: right; width: 54px;">
+  <button mat-button [ngClass]="{'selected-button': selectedButton === 'Paramètres'}" (click)="clickNoMenuButton('Paramètres'); openSettingsWindow()">
+    <mat-icon>settings</mat-icon>
+  </button>
+    </span>
+</div>

@@ -1,0 +1,91 @@
+<mat-dialog-content>
+  <header>
+    <h1>Page de Paramètrage</h1>
+  </header>
+
+  <mat-form-field appearance="outline">
+    <input matInput placeholder="Titre du document">
+  </mat-form-field>
+
+  <div class="form-fields">
+    <div class="empty-fields">
+      <mat-form-field appearance="outline">
+        <input matInput placeholder="Longueur">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <input matInput placeholder="Largeur">
+      </mat-form-field>
+    </div>
+  </div>
+
+  <h4>Orientation</h4>
+  <div class="buttons">
+    <button mat-raised-button [color]="isPortraitSelected ? 'primary' : ''"
+            (click)="isPortraitSelected = true; isLandscapeSelected = false">Portrait
+    </button>
+    <button mat-raised-button [color]="isLandscapeSelected ? 'primary' : ''"
+            (click)="isLandscapeSelected = true; isPortraitSelected = false">Paysage
+    </button>
+  </div>
+  <br>
+
+  <h4>Résolution</h4>
+  <div class="form-fields">
+    <div class="empty-fields">
+      <mat-form-field appearance="outline">
+        <input matInput placeholder>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <input matInput placeholder>
+      </mat-form-field>
+    </div>
+  </div>
+  <br>
+
+  <h4>Mode chromatique</h4>
+  <div class="form-fields">
+    <div class="empty-fields">
+      <mat-form-field appearance="outline">
+        <mat-select>
+          <mat-option value="option1">Couleur RVB</mat-option>
+          <mat-option value="option2">Couleur CMJN</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-select>
+          <mat-option value="bit1">8 bits</mat-option>
+          <mat-option value="bit2">16 bits</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </div>
+  <br>
+
+  <h4>Contenu de l'arrière-plan</h4>
+    <div class="selected-color-button" ngx-colors-trigger [(ngModel)]="backgroundColor" [ngStyle]="{'background': backgroundColor}"></div>
+
+  <br>
+  <h4>Profil colométrique</h4>
+  <mat-form-field appearance="outline">
+    <mat-select>
+      <mat-option value="Espace de travail RVB">Espace de travail RVB</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <br>
+
+  <h4>Format de pixels</h4>
+  <mat-form-field appearance="outline">
+    <mat-select>
+      <mat-option value="pixels carré">Pixels carré</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <h4>Aperçu du document</h4>
+  <div class="preview-content">
+    <div class="document-preview" [style.background-color]="backgroundColor"></div>
+  </div>
+  <mat-dialog-actions>
+    <button mat-raised-button color="primary" (click)="openDialog()">Ouvrir</button>
+    <button mat-raised-button color="primary" (click)="closeDialog()">Fermer</button>
+  </mat-dialog-actions>
+</mat-dialog-content>

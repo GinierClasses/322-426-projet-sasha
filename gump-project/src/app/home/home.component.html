@@ -1,0 +1,61 @@
+<div>
+  <p style="margin: 0px">
+    <mat-toolbar color="primary">
+      <!-- <mat-toolbar color="primary">-->
+      <span>Gump</span>
+    </mat-toolbar>
+</p>
+</div>
+<div class="page-sidebar">
+  <ul>
+    <li>
+      <a>
+        <div class="nav-button" style="background: #72a3f9" (click)="openSettingsWindow()">Nouveau fichier</div>
+      </a>
+    </li>
+    <li>
+      <a>
+        <div class="nav-button" [ngClass]="{'nav-button-active': isCurrentRoute('/open')}" routerLink="/open">Ouvrir</div>
+      </a>
+    </li>
+    <li>
+      <a>
+        <mat-divider style="border-top-color: black"></mat-divider>
+      </a>
+    </li>
+    <li>
+      <a>
+        <div class="nav-button" [ngClass]="{'nav-button-active': isCurrentRoute('/')}" routerLink="/">Acceuil</div>
+      </a>
+    </li>
+    <li>
+      <a>
+        <div class="nav-button" [ngClass]="{'nav-button-active': isCurrentRoute('/formation')}" routerLink="/formation">Formation</div>
+      </a>
+    </li>
+    <li>
+      <a>
+        <h3>FICHIERS</h3>
+      </a>
+    </li>
+    <li>
+      <a>
+        <div class="nav-button" (click)="openShareWindow()">Partager</div>
+      </a>
+    </li>
+    <li>
+      <a>
+        <div class="nav-button" [ngClass]="{'nav-button-active': isCurrentRoute('/files')}" routerLink="/files">Vos Fichiers</div>
+      </a>
+    </li>
+    <li>
+      <a>
+        <div class="nav-button" [ngClass]="{'nav-button-active': isCurrentRoute('/deleted')}" routerLink="/deleted">Supprimés</div>
+      </a>
+    </li>
+  </ul>
+</div>
+<app-home-content *ngIf="isContent"></app-home-content>
+<app-home-formation *ngIf="isFormation"></app-home-formation>
+<app-home-supprimes *ngIf="isSupprimes"></app-home-supprimes>
+<app-home-vos-fichiers *ngIf="isVosFichiers"></app-home-vos-fichiers>
